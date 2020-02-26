@@ -35,7 +35,7 @@
             <Frame Margin="0,60,0,0">
                 <StackLayout Margin="10,0,10,0">
                     <Label
-                        Margin="0,16,0,0"
+                        Margin="0,16,0,16"
                         FontSize="24"
                         HorizontalOptions="Center"
                         HorizontalTextAlignment="Center"
@@ -47,7 +47,7 @@
                         IsPassword="True"
                         Placeholder="Password" />
                     <Button
-                        Margin="16,8,16,8"
+                        Margin="16,24,16,24"
                         Clicked="Login_Clicked"
                         HorizontalOptions="Center"
                         Text="login"
