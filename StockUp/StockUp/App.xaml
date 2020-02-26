@@ -24,27 +24,36 @@
         <Style TargetType="Button">
             <Setter Property="TextColor" Value="#F1F2F2" />
             <Setter Property="FontSize" Value="18" />
-            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="CornerRadius" Value="22" />
             <Setter Property="BackgroundColor" Value="#3167DB" />
+            <Setter Property="WidthRequest" Value="150" />
         </Style>
         <Style x:Key="secondary-button" TargetType="Button">
             <Setter Property="TextColor" Value="#3167DB" />
             <Setter Property="FontSize" Value="18" />
-            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="CornerRadius" Value="22" />
             <Setter Property="BackgroundColor" Value="#F1F2F2" />
             <Setter Property="BorderColor" Value="#3167DB" />
             <Setter Property="BorderWidth" Value="2" />
+            <Setter Property="WidthRequest" Value="150" />
+
         </Style>
         <Style TargetType="Label">
             <Setter Property="TextColor" Value="#2e3131" />
         </Style>
         <Style x:Key="title" TargetType="Label">
-            <Setter Property="FontSize" Value="26" />
+            <Setter Property="FontSize" Value="32" />
         </Style>
         <Style TargetType="Entry">
             <Setter Property="TextColor" Value="#2e3131" />
             <Setter Property="BackgroundColor" Value="#F1F2F2" />
             <Setter Property="FontSize" Value="16" />
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="BackgroundColor" Value="#F1F2F2" />
+            <Setter Property="HasShadow" Value="True" />
         </Style>
     </Application.Resources>
 </Application>

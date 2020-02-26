@@ -7,6 +7,9 @@
     Title="Home"
     ios:Page.LargeTitleDisplay="Always"
     Style="{StaticResource primary-content}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" />
+    </ContentPage.ToolbarItems>
     <StackLayout Margin="40,100,40,0">
         <Button Text="Start Your Day" />
         <Button Text="Activate New Pack" />

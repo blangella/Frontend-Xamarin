@@ -24,26 +24,37 @@
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}">
-            <Image Source="Logo_White.png" WidthRequest="100" />
+            <Image Source="Logo_White.png" WidthRequest="150" />
             <Label
+                Margin="0,8,0,0"
                 HorizontalOptions="Center"
                 HorizontalTextAlignment="Center"
                 Style="{StaticResource title}"
                 Text="StockUp"
                 TextColor="#F1F2F2" />
+            <Frame Margin="0,60,0,0">
+                <StackLayout Margin="10,0,10,0">
+                    <Label
+                        Margin="0,16,0,0"
+                        FontSize="24"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        Text="Login to your account" />
+                    <Entry Margin="16,20,16,4" Placeholder="Store ID" />
+                    <Entry Margin="16,4,16,4" Placeholder="Employee ID" />
+                    <Entry
+                        Margin="16,4,16,4"
+                        IsPassword="True"
+                        Placeholder="Password" />
+                    <Button
+                        Margin="16,8,16,8"
+                        Clicked="Login_Clicked"
+                        HorizontalOptions="Center"
+                        Text="login"
+                        VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
 
-            <StackLayout Margin="10,100,10,0">
-                <Entry Margin="16,20,16,4" Placeholder="Store ID" />
-                <Entry Margin="16,4,16,4" Placeholder="Employee ID" />
-                <Entry
-                    Margin="16,4,16,4"
-                    IsPassword="True"
-                    Placeholder="Password" />
-                <Button
-                    Margin="16,8,16,8"
-                    Clicked="Login_Clicked"
-                    Text="login" />
-            </StackLayout>
         </StackLayout>
     </RelativeLayout>
 
