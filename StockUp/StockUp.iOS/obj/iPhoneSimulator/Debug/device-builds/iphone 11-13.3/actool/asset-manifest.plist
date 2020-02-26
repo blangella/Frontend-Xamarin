@@ -32,6 +32,63 @@
 		<dict>
 			<key>affected-items</key>
 			<array>
+				<string>./Logo_Blue.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Logo_Blue.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./Logo_Blue.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Logo_Blue.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./Logo_Blue.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Logo_Blue.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./Logo_Blue.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Logo_Blue.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "Logo_Blue" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./Background.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Background.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./Background.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Background.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./Background.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Background.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./Background.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Background.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "Background" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
+				<string>./Logo_White.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Logo_White.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./Logo_White.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Logo_White.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./Logo_White.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Logo_White.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
+				<string>./Logo_White.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
+				<string>./Logo_White.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
+			</array>
+			<key>catalog</key>
+			<string>/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/actool/cloned-assets/Assets.xcassets</string>
+			<key>message</key>
+			<string>The image set "Logo_White" has 8 unassigned children.</string>
+			<key>type</key>
+			<string>Ambiguous Content</string>
+		</dict>
+		<dict>
+			<key>affected-items</key>
+			<array>
 				<string>./Background.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
 				<string>./Background.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
 				<string>./Background.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
@@ -83,63 +140,6 @@
 			<string>/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/actool/cloned-assets/Assets.xcassets</string>
 			<key>message</key>
 			<string>The image set "Logo_White" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./Logo_White.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Logo_White.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./Logo_White.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Logo_White.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./Logo_White.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Logo_White.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./Logo_White.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Logo_White.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "Logo_White" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./Logo_Blue.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Logo_Blue.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./Logo_Blue.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Logo_Blue.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./Logo_Blue.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Logo_Blue.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./Logo_Blue.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Logo_Blue.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "Logo_Blue" has 8 unassigned children.</string>
-			<key>type</key>
-			<string>Ambiguous Content</string>
-		</dict>
-		<dict>
-			<key>affected-items</key>
-			<array>
-				<string>./Background.imageset/[watch][][&lt;=145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Background.imageset/[watch][][&lt;=145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./Background.imageset/[watch][][&gt;145][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Background.imageset/[watch][][&gt;145][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./Background.imageset/[watch][][][2x][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Background.imageset/[watch][][][2x][][][][][][][light][][][][2d][(null)]</string>
-				<string>./Background.imageset/[watch][][][][][][][][][][dark][][][][2d][(null)]</string>
-				<string>./Background.imageset/[watch][][][][][][][][][][light][][][][2d][(null)]</string>
-			</array>
-			<key>catalog</key>
-			<string>/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/actool/cloned-assets/Assets.xcassets</string>
-			<key>message</key>
-			<string>The image set "Background" has 8 unassigned children.</string>
 			<key>type</key>
 			<string>Ambiguous Content</string>
 		</dict>

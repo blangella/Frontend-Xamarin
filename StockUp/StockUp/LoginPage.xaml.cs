@@ -19,10 +19,12 @@ namespace StockUp
             if (employee.Text.ToLower().Equals("admin"))
             {
                 Navigation.PushAsync(new AdminHomePage());
+                //App.Current.MainPage = new AdminHomePage();
             }
             else
             {
                 Navigation.PushAsync(new HomePage());
+                //App.Current.MainPage = new HomePage();
             }
 
         }
