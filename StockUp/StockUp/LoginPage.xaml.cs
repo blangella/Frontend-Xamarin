@@ -11,11 +11,13 @@ namespace StockUp
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
+            BindingContext = new LoginViewModel();
         }
 
         void Login_Clicked(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new HomePage());
+
         }
 
     }

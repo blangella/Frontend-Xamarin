@@ -3,7 +3,11 @@
     x:Class="StockUp.LoginPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:StockUp"
     Style="{StaticResource primary-content}">
+    <ContentPage.BindingContext>
+        <local:LoginViewModel />
+    </ContentPage.BindingContext>
     <RelativeLayout
         Padding="0"
         HorizontalOptions="FillAndExpand"
@@ -40,7 +44,10 @@
                         HorizontalOptions="Center"
                         HorizontalTextAlignment="Center"
                         Text="Login to your account" />
-                    <Entry Margin="16,20,16,4" Placeholder="Store ID" />
+                    <Entry
+                        Margin="16,20,16,4"
+                        Placeholder="Store ID"
+                        Text="{Binding StoreID}" />
                     <Entry Margin="16,4,16,4" Placeholder="Employee ID" />
                     <Entry
                         Margin="16,4,16,4"
