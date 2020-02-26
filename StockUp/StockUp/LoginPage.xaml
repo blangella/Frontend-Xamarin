@@ -45,11 +45,16 @@
                         HorizontalTextAlignment="Center"
                         Text="Login to your account" />
                     <Entry
+                        x:Name="store"
                         Margin="16,20,16,4"
                         Placeholder="Store ID"
                         Text="{Binding StoreID}" />
-                    <Entry Margin="16,4,16,4" Placeholder="Employee ID" />
                     <Entry
+                        x:Name="employee"
+                        Margin="16,4,16,4"
+                        Placeholder="Employee ID" />
+                    <Entry
+                        x:Name="password"
                         Margin="16,4,16,4"
                         IsPassword="True"
                         Placeholder="Password" />

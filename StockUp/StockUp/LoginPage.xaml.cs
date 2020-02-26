@@ -16,7 +16,14 @@ namespace StockUp
 
         void Login_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new HomePage());
+            if (employee.Text.ToLower().Equals("admin"))
+            {
+                Navigation.PushAsync(new AdminHomePage());
+            }
+            else
+            {
+                Navigation.PushAsync(new HomePage());
+            }
 
         }
 
