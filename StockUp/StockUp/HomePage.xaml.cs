@@ -10,6 +10,7 @@ namespace StockUp
         public HomePage()
         {
             InitializeComponent();
+
         }
     }
 }
