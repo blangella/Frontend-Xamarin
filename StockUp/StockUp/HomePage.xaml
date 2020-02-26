@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="StockUp.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Style="{StaticResource primary-content}">
+
+    <StackLayout Margin="40,100,40,0">
+        <Button Text="Start Your Day" />
+        <Button Text="Activate New Pack" />
+        <Button Text="End Your Day" />
+    </StackLayout>
+
+</ContentPage>

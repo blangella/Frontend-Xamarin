@@ -1,5 +1,50 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="StockUp.App">
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="StockUp.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
     <Application.Resources>
+        <Color x:Key="primary-blue">#22a7f0</Color>
+        <Color x:Key="primary-dark-gray">#2e3131</Color>
+
+        <Style TargetType="NavigationPage">
+            <Setter Property="BackgroundColor" Value="#F1F2F2" />
+            <Setter Property="BarBackgroundColor" Value="#3167DB" />
+            <Setter Property="BarTextColor" Value="#F1F2F2" />
+        </Style>
+        <Style
+            x:Key="primary-content"
+            ApplyToDerivedTypes="True"
+            TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="#F1F2F2" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="#F1F2F2" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BackgroundColor" Value="#3167DB" />
+        </Style>
+        <Style x:Key="secondary-button" TargetType="Button">
+            <Setter Property="TextColor" Value="#3167DB" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="BackgroundColor" Value="#F1F2F2" />
+            <Setter Property="BorderColor" Value="#3167DB" />
+            <Setter Property="BorderWidth" Value="2" />
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="#2e3131" />
+        </Style>
+        <Style x:Key="title" TargetType="Label">
+            <Setter Property="FontSize" Value="26" />
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="TextColor" Value="#2e3131" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
     </Application.Resources>
 </Application>
