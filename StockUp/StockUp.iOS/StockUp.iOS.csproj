@@ -112,6 +112,18 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Logo_White.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Logo_White.imageset\SOIS_Logo_White.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_White.imageset\SOIS_Logo_White%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_White.imageset\SOIS_Logo_White%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_Blue.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Logo_Blue.imageset\SOIS_Logo_Blue.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_Blue.imageset\SOIS_Logo_Blue%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Logo_Blue.imageset\SOIS_Logo_Blue%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Background.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Background.imageset\SOIS_Background.png" />
+    <ImageAsset Include="Assets.xcassets\Background.imageset\SOIS_Background%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Background.imageset\SOIS_Background%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -131,5 +143,10 @@
       <Project>{B006BF62-F25D-40C8-8B91-4A562FF41333}</Project>
       <Name>StockUp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\Logo_White.imageset\" />
+    <Folder Include="Assets.xcassets\Logo_Blue.imageset\" />
+    <Folder Include="Assets.xcassets\Background.imageset\" />
   </ItemGroup>
 </Project>

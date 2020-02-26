@@ -4,18 +4,47 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Style="{StaticResource primary-content}">
-    <StackLayout Margin="40,100,40,0">
-        <Label
-            HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"
-            Style="{StaticResource title}"
-            Text="StockUp" />
+    <RelativeLayout
+        Padding="0"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+        <Image
+            Aspect="AspectFill"
+            HorizontalOptions="Fill"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            Source="Background.png"
+            VerticalOptions="Fill" />
 
-        <StackLayout Margin="10,100,10,0">
-            <Entry Placeholder="Store ID" />
-            <Entry Placeholder="Employee ID" />
-            <Entry IsPassword="True" Placeholder="Password" />
-            <Button Clicked="Login_Clicked" Text="login" />
+        <StackLayout
+            Margin="40,100,40,0"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}">
+            <Image Source="Logo_White.png" WidthRequest="100" />
+            <Label
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Style="{StaticResource title}"
+                Text="StockUp"
+                TextColor="#F1F2F2" />
+
+            <StackLayout Margin="10,100,10,0">
+                <Entry Margin="16,20,16,4" Placeholder="Store ID" />
+                <Entry Margin="16,4,16,4" Placeholder="Employee ID" />
+                <Entry
+                    Margin="16,4,16,4"
+                    IsPassword="True"
+                    Placeholder="Password" />
+                <Button
+                    Margin="16,8,16,8"
+                    Clicked="Login_Clicked"
+                    Text="login" />
+            </StackLayout>
         </StackLayout>
-    </StackLayout>
+    </RelativeLayout>
+
 </ContentPage>

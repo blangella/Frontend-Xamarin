@@ -10,7 +10,7 @@ namespace StockUp
         public HomePage()
         {
             InitializeComponent();
-
+            NavigationPage.SetHasBackButton(this, false);
         }
     }
 }
