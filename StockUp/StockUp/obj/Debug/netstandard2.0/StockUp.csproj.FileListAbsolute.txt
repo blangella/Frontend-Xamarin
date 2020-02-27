@@ -13,3 +13,4 @@
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/StockUp.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/ref/StockUp.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/StockUp.pdb
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/StockUp.csprojAssemblyReference.cache

@@ -16,15 +16,19 @@ namespace StockUp
 
         void Login_Clicked(System.Object sender, System.EventArgs e)
         {
-            if (employee.Text.ToLower().Equals("admin"))
+            if (employee.Text != null && employee.Text.ToLower().Equals("admin"))
             {
                 Navigation.PushAsync(new AdminHomePage());
                 //App.Current.MainPage = new AdminHomePage();
             }
-            else
+            else if (employee.Text != null && !employee.Text.ToLower().Equals("admin"))
             {
                 Navigation.PushAsync(new HomePage());
                 //App.Current.MainPage = new HomePage();
+            }
+            else
+            {
+                DisplayAlert("Error", "Make sure to input the required credentials", "OK");
             }
 
         }
