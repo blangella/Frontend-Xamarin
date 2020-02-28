@@ -30,5 +30,35 @@ namespace StockUp
 
             await Navigation.PushModalAsync (scanPage);
         }
+
+        async void Activate_Clicked(System.Object sender, System.EventArgs e)
+        {
+            scanPage = new ZXingScannerPage ();
+            scanPage.OnScanResult += (result) => {
+                scanPage.IsScanning = false;
+
+                Device.BeginInvokeOnMainThread (() => {
+                    Navigation.PopModalAsync ();
+                    DisplayAlert("Scanned Barcode", result.Text, "OK");
+                });
+            };
+
+            await Navigation.PushModalAsync (scanPage);
+        }
+
+        async void End_Clicked(System.Object sender, System.EventArgs e)
+        {
+            scanPage = new ZXingScannerPage ();
+            scanPage.OnScanResult += (result) => {
+                scanPage.IsScanning = false;
+
+                Device.BeginInvokeOnMainThread (() => {
+                    Navigation.PopModalAsync ();
+                    DisplayAlert("Scanned Barcode", result.Text, "OK");
+                });
+            };
+
+            await Navigation.PushModalAsync (scanPage);
+        }
     }
 }

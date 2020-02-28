@@ -13,6 +13,7 @@
         HorizontalOptions="FillAndExpand"
         VerticalOptions="FillAndExpand">
         <Image
+            Margin="-15,-15,-15,-15"
             Aspect="AspectFill"
             HorizontalOptions="Fill"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -23,7 +24,7 @@
             VerticalOptions="Fill" />
 
         <StackLayout
-            Margin="40,100,40,0"
+            Margin="40,50,40,0"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -36,7 +37,7 @@
                 Style="{StaticResource title}"
                 Text="StockUp"
                 TextColor="#F1F2F2" />
-            <Frame Margin="0,60,0,0">
+            <Frame Margin="0,40,0,0">
                 <StackLayout Margin="10,0,10,0">
                     <Label
                         Margin="0,16,0,16"
