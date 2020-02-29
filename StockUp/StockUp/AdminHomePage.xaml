@@ -7,7 +7,7 @@
     Title="Admin Home"
     ios:Page.LargeTitleDisplay="Always">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Logout" />
+        <ToolbarItem Clicked="Logout_Clicked" Text="Logout" />
     </ContentPage.ToolbarItems>
     <StackLayout Margin="24,16,24,0">
         <Frame Style="{StaticResource user-function-frame}">
@@ -30,7 +30,5 @@
                 <Label Style="{StaticResource user-function-info}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus." />
             </StackLayout>
         </Frame>
-
-
     </StackLayout>
 </ContentPage>

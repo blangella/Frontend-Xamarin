@@ -8,7 +8,10 @@
     ios:Page.LargeTitleDisplay="Always"
     Style="{StaticResource primary-content}">
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="" Text="Logout" />
+        <ToolbarItem
+            Clicked="Logout_Clicked"
+            IconImageSource=""
+            Text="Logout" />
     </ContentPage.ToolbarItems>
     <StackLayout Margin="24,16,24,0">
         <Frame Style="{StaticResource user-function-frame}">

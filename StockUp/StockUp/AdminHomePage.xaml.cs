@@ -11,5 +11,12 @@ namespace StockUp
         {
             InitializeComponent();
         }
+
+        void Logout_Clicked(System.Object sender, System.EventArgs e)
+        {
+            NavigationPage page = new NavigationPage(new LoginPage());
+            App.Current.MainPage = page;
+            Navigation.PopToRootAsync();
+        }
     }
 }
