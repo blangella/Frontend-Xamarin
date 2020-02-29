@@ -18,7 +18,10 @@
         </Frame>
         <Frame Margin="0,16,0,0" Style="{StaticResource user-function-frame}">
             <StackLayout>
-                <Button Style="{StaticResource user-function-button}" Text="Manage Users" />
+                <Button
+                    Clicked="ManageUsers_Clicked"
+                    Style="{StaticResource user-function-button}"
+                    Text="Add / Remove Users" />
 
                 <Label Style="{StaticResource user-function-info}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus." />
             </StackLayout>

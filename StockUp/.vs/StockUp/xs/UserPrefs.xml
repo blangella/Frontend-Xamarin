@@ -1,33 +1,26 @@
 ﻿<Properties StartupConfiguration="{135DE3E3-A199-4A25-A7B1-5107F2268BE2}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/AdminHomePage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/LoginPage.xaml">
     <Files>
       <File FileName="StockUp/App.xaml" Line="71" Column="59" IsPinned="True" />
       <File FileName="StockUp/App.xaml.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="StockUp/HomePage.xaml.cs" Line="8" Column="2" />
-      <File FileName="StockUp/HomePage.xaml" Line="46" Column="1" />
-      <File FileName="StockUp/AdminHomePage.xaml" Line="35" Column="1" />
-      <File FileName="StockUp/AdminHomePage.xaml.cs" Line="19" Column="27" />
+      <File FileName="StockUp/AdminHomePage.xaml" Line="24" Column="39" />
+      <File FileName="StockUp/AdminHomePage.xaml.cs" Line="23" Column="10" />
+      <File FileName="StockUp/ManageUsersPage.xaml" Line="26" Column="1" />
+      <File FileName="StockUp/ManageUsersPage.xaml.cs" Line="1" Column="1" />
       <File FileName="StockUp/LoginPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="StockUp/LoginPage.xaml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="StockUp" expanded="True">
             <Node name="StockUp" expanded="True">
-              <Node name="AdminHomePage.xaml" expanded="True">
-                <Node name="AdminHomePage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="AdminHomePage.xaml" expanded="True" />
               <Node name="App.xaml" expanded="True" />
-              <Node name="HomePage.xaml" expanded="True" />
-              <Node name="LoginPage.xaml" expanded="True" />
+              <Node name="LoginPage.xaml" expanded="True" selected="True" />
+              <Node name="ManageUsersPage.xaml" expanded="True" />
             </Node>
-            <Node name="StockUp.Android" expanded="True">
-              <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="StockUp.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>

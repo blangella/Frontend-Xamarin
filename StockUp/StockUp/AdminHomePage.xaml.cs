@@ -18,5 +18,10 @@ namespace StockUp
             App.Current.MainPage = page;
             Navigation.PopToRootAsync();
         }
+
+        void ManageUsers_Clicked(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new ManageUsersPage());
+        }
     }
 }
