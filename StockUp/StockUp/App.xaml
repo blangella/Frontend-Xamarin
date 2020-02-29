@@ -21,7 +21,7 @@
             TargetType="ContentPage">
             <Setter Property="BackgroundColor" Value="#F1F2F2" />
         </Style>
-        <Style TargetType="Button">
+        <Style x:Key="primary-button" TargetType="Button">
             <Setter Property="TextColor" Value="#F1F2F2" />
             <Setter Property="FontSize" Value="18" />
             <Setter Property="CornerRadius" Value="22" />
@@ -49,11 +49,28 @@
             <Setter Property="BackgroundColor" Value="#F1F2F2" />
             <Setter Property="FontSize" Value="16" />
         </Style>
-        <Style TargetType="Frame">
+        <Style x:Key="login-form-frame" TargetType="Frame">
             <Setter Property="CornerRadius" Value="10" />
             <Setter Property="Padding" Value="0" />
             <Setter Property="BackgroundColor" Value="#F1F2F2" />
             <Setter Property="HasShadow" Value="True" />
+        </Style>
+        <Style x:Key="user-function-frame" TargetType="Frame">
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="BackgroundColor" Value="#F1F2F2" />
+            <Setter Property="HasShadow" Value="True" />
+        </Style>
+        <Style x:Key="user-function-button" TargetType="Button">
+            <Setter Property="CornerRadius" Value="0" />
+            <Setter Property="TextColor" Value="#F1F2F2" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="BackgroundColor" Value="#3167DB" />
+            <Setter Property="WidthRequest" Value="150" />
+        </Style>
+        <Style x:Key="user-function-info" TargetType="Label">
+            <Setter Property="Padding" Value="16, 8, 16, 8" />
+            <Setter Property="TextColor" Value="DimGray" />
+            <Setter Property="LineBreakMode" Value="WordWrap" />
         </Style>
     </Application.Resources>
 </Application>

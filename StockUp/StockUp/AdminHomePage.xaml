@@ -3,19 +3,34 @@
     x:Class="StockUp.AdminHomePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Admin Home">
-    <StackLayout>
-        <Button
-            HorizontalOptions="Center"
-            Text="Inventory"
-            VerticalOptions="Center" />
-        <Button
-            HorizontalOptions="Center"
-            Text="Manage Users"
-            VerticalOptions="Center" />
-        <Button
-            HorizontalOptions="Center"
-            Text="Charts"
-            VerticalOptions="Center" />
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    Title="Admin Home"
+    ios:Page.LargeTitleDisplay="Always">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" />
+    </ContentPage.ToolbarItems>
+    <StackLayout Margin="24,16,24,0">
+        <Frame Style="{StaticResource user-function-frame}">
+            <StackLayout>
+                <Button Style="{StaticResource user-function-button}" Text="Inventory" />
+                <Label Style="{StaticResource user-function-info}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus." />
+            </StackLayout>
+        </Frame>
+        <Frame Margin="0,16,0,0" Style="{StaticResource user-function-frame}">
+            <StackLayout>
+                <Button Style="{StaticResource user-function-button}" Text="Manage Users" />
+
+                <Label Style="{StaticResource user-function-info}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus." />
+            </StackLayout>
+        </Frame>
+        <Frame Margin="0,16,0,0" Style="{StaticResource user-function-frame}">
+            <StackLayout>
+                <Button Style="{StaticResource user-function-button}" Text="Charts" />
+
+                <Label Style="{StaticResource user-function-info}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus." />
+            </StackLayout>
+        </Frame>
+
+
     </StackLayout>
 </ContentPage>

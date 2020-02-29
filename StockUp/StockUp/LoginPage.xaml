@@ -37,7 +37,7 @@
                 Style="{StaticResource title}"
                 Text="StockUp"
                 TextColor="#F1F2F2" />
-            <Frame Margin="0,40,0,0">
+            <Frame Margin="0,40,0,0" Style="{StaticResource login-form-frame}">
                 <StackLayout Margin="10,0,10,0">
                     <Label
                         Margin="0,16,0,16"
@@ -63,6 +63,7 @@
                         Margin="16,24,16,24"
                         Clicked="Login_Clicked"
                         HorizontalOptions="Center"
+                        Style="{StaticResource primary-button}"
                         Text="login"
                         VerticalOptions="Center" />
                 </StackLayout>
