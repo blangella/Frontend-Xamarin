@@ -18,13 +18,15 @@ namespace StockUp
         {
             if (employee.Text != null && employee.Text.ToLower().Equals("admin"))
             {
-                Navigation.PushAsync(new AdminHomePage());
-                //App.Current.MainPage = new AdminHomePage();
+                NavigationPage page = new NavigationPage(new AdminHomePage());
+                App.Current.MainPage = page;
+                Navigation.PopToRootAsync();
             }
             else if (employee.Text != null && !employee.Text.ToLower().Equals("admin"))
             {
-                Navigation.PushAsync(new HomePage());
-                //App.Current.MainPage = new HomePage();
+                NavigationPage page = new NavigationPage(new HomePage());
+                App.Current.MainPage = page;
+                Navigation.PopToRootAsync();
             }
             else
             {
