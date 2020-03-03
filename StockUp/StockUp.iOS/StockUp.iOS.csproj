@@ -124,6 +124,14 @@
     <ImageAsset Include="Assets.xcassets\Background.imageset\SOIS_Background.png" />
     <ImageAsset Include="Assets.xcassets\Background.imageset\SOIS_Background%402x.png" />
     <ImageAsset Include="Assets.xcassets\Background.imageset\SOIS_Background%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Status_Red.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Status_Green.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Status_Red.imageset\status_red.png" />
+    <ImageAsset Include="Assets.xcassets\Status_Green.imageset\status_green.png" />
+    <ImageAsset Include="Assets.xcassets\Status_Green.imageset\status_green%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Status_Green.imageset\status_green%403x.png" />
+    <ImageAsset Include="Assets.xcassets\Status_Red.imageset\status_red%402x.png" />
+    <ImageAsset Include="Assets.xcassets\Status_Red.imageset\status_red%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -154,5 +162,7 @@
     <Folder Include="Assets.xcassets\Logo_White.imageset\" />
     <Folder Include="Assets.xcassets\Logo_Blue.imageset\" />
     <Folder Include="Assets.xcassets\Background.imageset\" />
+    <Folder Include="Assets.xcassets\Status_Red.imageset\" />
+    <Folder Include="Assets.xcassets\Status_Green.imageset\" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="StockUp.ScanSummaryPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Summary Page">
+    <ListView x:Name="PacketListView">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Image
+                                Margin="8,0,8,0"
+                                Source="Status_Red.png"
+                                WidthRequest="20" />
+                            <StackLayout>
+                                <Label FontSize="18" Text="{Binding Id}" />
+                                <Label FontSize="12" Text="{Binding Status}" />
+                                <Image Source="status_green" />
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
