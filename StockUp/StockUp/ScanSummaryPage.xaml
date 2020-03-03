@@ -4,21 +4,21 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Summary Page">
-    <ListView x:Name="PacketListView">
+    <ListView x:Name="PacketListView" RowHeight="75">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
-                    <StackLayout>
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                         <StackLayout Orientation="Horizontal">
-                            <Image
-                                Margin="8,0,8,0"
-                                Source="Status_Red.png"
-                                WidthRequest="20" />
-                            <StackLayout>
+                            <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
                                 <Label FontSize="18" Text="{Binding Id}" />
                                 <Label FontSize="12" Text="{Binding Status}" />
-                                <Image Source="status_green" />
                             </StackLayout>
+                            <Image
+                                Margin="0,0,16,0"
+                                Source="Status_Red.png"
+                                WidthRequest="20" />
+
                         </StackLayout>
                     </StackLayout>
                 </ViewCell>

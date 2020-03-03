@@ -513,3 +513,5 @@
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/res/drawable/background.png
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/res/drawable/logo_blue.png
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/res/drawable/logo_white.png
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/res/drawable/status_green.png
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/res/drawable/status_red.png
