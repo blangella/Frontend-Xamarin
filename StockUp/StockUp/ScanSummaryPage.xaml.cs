@@ -59,6 +59,12 @@ class Ticket {
         set;
     }
 
+    public string IconSource
+    {
+        get;
+        set;
+    }
+
     public Ticket(int game, int packet, int ticket)
     {
         GameNumber = game;
@@ -73,11 +79,13 @@ class Ticket {
         {
             Status = "Checked";
             IsChecked = true;
+            IconSource = "Status_Green.png";
         }
         else
         {
             Status = "Not Checked Yet";
             IsChecked = false;
+            IconSource = "Status_Red.png";
         }
 
     }

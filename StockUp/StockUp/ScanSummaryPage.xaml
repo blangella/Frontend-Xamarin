@@ -14,11 +14,11 @@
                                 <Label FontSize="18" Text="{Binding Id}" />
                                 <Label FontSize="12" Text="{Binding Status}" />
                             </StackLayout>
-                            <Image
-                                Margin="0,0,16,0"
-                                Source="Status_Red.png"
-                                WidthRequest="20" />
-
+                            <Image Margin="0,0,16,0" WidthRequest="20">
+                                <Image.Source>
+                                    <FileImageSource File="{Binding IconSource}" />
+                                </Image.Source>
+                            </Image>
                         </StackLayout>
                     </StackLayout>
                 </ViewCell>

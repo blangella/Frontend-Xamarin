@@ -1,12 +1,14 @@
 ﻿<Properties StartupConfiguration="{135DE3E3-A199-4A25-A7B1-5107F2268BE2}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/HomePage.xaml.cs">
     <Files>
       <File FileName="StockUp/App.xaml" Line="71" Column="59" IsPinned="True" />
-      <File FileName="StockUp/App.xaml.cs" Line="1" Column="1" IsPinned="True" />
-      <File FileName="StockUp/ScanSummaryPage.xaml" Line="26" Column="1" />
-      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="29" Column="13" />
+      <File FileName="StockUp/App.xaml.cs" IsPinned="True" />
+      <File FileName="StockUp/ScanSummaryPage.xaml" Line="29" Column="1" />
+      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="88" Column="59" />
       <File FileName="StockUp/HomePage.xaml.cs" Line="24" Column="1" />
+      <File FileName="StockUp.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="StockUp.iOS/Main.cs" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,16 +17,17 @@
             <Node name="StockUp" expanded="True">
               <Node name="AdminHomePage.xaml" expanded="True" />
               <Node name="App.xaml" expanded="True" />
-              <Node name="HomePage.xaml" expanded="True" />
+              <Node name="HomePage.xaml" expanded="True">
+                <Node name="HomePage.xaml.cs" selected="True" />
+              </Node>
               <Node name="ScanSummaryPage.xaml" expanded="True" />
             </Node>
             <Node name="StockUp.Android" expanded="True">
               <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True">
-                  <Node name="Status_Red.png" selected="True" />
-                </Node>
+                <Node name="drawable" expanded="True" />
               </Node>
             </Node>
+            <Node name="StockUp.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
