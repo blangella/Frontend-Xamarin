@@ -4,6 +4,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     Title="Summary Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Clicked="Scan_Clicked"
+            IconImageSource=""
+            Text="Scan" />
+        <ToolbarItem
+            Clicked="Confirm_Clicked"
+            IconImageSource=""
+            Text="Confirm" />
+    </ContentPage.ToolbarItems>
     <ListView x:Name="PacketListView" RowHeight="75">
         <ListView.ItemTemplate>
             <DataTemplate>
