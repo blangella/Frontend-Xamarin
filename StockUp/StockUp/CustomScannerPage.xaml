@@ -2,19 +2,11 @@
 <ContentPage
     x:Class="StockUp.CustomScannerPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
     <StackLayout>
-        <Label
-            HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"
-            Style="{StaticResource title}"
-            Text="Scanner" />
-        <ContentView>
-            <Label Text="Scanner View" />
-        </ContentView>
-        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-            <Button Style="{StaticResource primary-button}" Text="Confirm" />
-            <Button Style="{StaticResource secondary-button}" Text="Done" />
-        </StackLayout>
+        <Grid
+            x:Name="ScannerGrid"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand" />
     </StackLayout>
 </ContentPage>
