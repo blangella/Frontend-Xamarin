@@ -58,8 +58,8 @@ namespace StockUp
                                 tickets += ", "+ScannedTickets[i];
                         }
                         await DisplayAlert("Going back to summary page with new scans", tickets, "OK");
-                            await Navigation.PopModalAsync();
-                            break;
+                        await Navigation.PopModalAsync();
+                        break;
 
                     }
                 });

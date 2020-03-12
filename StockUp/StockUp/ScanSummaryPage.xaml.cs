@@ -50,17 +50,7 @@ namespace StockUp
 
         async void Scan_Clicked(System.Object sender, System.EventArgs e)
         {
-            scanPage = new ZXingScannerPage ();
-            scanPage.OnScanResult += (result) => {
-                scanPage.IsScanning = false;
-
-                Device.BeginInvokeOnMainThread (() => {
-                    Navigation.PopModalAsync ();
-                    DisplayAlert("Scanned Barcode", result.Text, "OK");
-                });
-            };
-
-            await Navigation.PushModalAsync (scanPage);
+            await Navigation.PushModalAsync(new CustomScannerPage());
         }
 
         async void Confirm_Clicked(System.Object sender, System.EventArgs e)

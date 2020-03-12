@@ -18,47 +18,16 @@ namespace StockUp
         async void Start_Clicked(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushAsync(new ScanSummaryPage());
-            //scanPage = new ZXingScannerPage ();
-            //scanPage.OnScanResult += (result) => {
-            //    scanPage.IsScanning = false;
-
-            //    Device.BeginInvokeOnMainThread (() => {
-            //        Navigation.PopModalAsync ();
-            //        DisplayAlert("Scanned Barcode", result.Text, "OK");
-            //    });
-            //};
-
-            //await Navigation.PushModalAsync (scanPage);
         }
 
         async void Activate_Clicked(System.Object sender, System.EventArgs e)
         {
-            scanPage = new ZXingScannerPage ();
-            scanPage.OnScanResult += (result) => {
-                scanPage.IsScanning = false;
-
-                Device.BeginInvokeOnMainThread (() => {
-                    Navigation.PopModalAsync ();
-                    DisplayAlert("Scanned Barcode", result.Text, "OK");
-                });
-            };
-
-            await Navigation.PushModalAsync (scanPage);
+            await Navigation.PushAsync(new ScanSummaryPage());
         }
 
         async void End_Clicked(System.Object sender, System.EventArgs e)
         {
-            scanPage = new ZXingScannerPage ();
-            scanPage.OnScanResult += (result) => {
-                scanPage.IsScanning = false;
-
-                Device.BeginInvokeOnMainThread (() => {
-                    Navigation.PopModalAsync ();
-                    DisplayAlert("Scanned Barcode", result.Text, "OK");
-                });
-            };
-
-            await Navigation.PushModalAsync (scanPage);
+            await Navigation.PushAsync(new ScanSummaryPage());
         }
 
         void Logout_Clicked(System.Object sender, System.EventArgs e)
