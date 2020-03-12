@@ -21,7 +21,7 @@ namespace StockUp
 
         void ManageUsers_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new ManageUsersPage());
+            Navigation.PushModalAsync(new ManageUsersPage());
         }
     }
 }
