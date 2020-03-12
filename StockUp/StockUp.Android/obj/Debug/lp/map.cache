@@ -1,5 +1,9 @@
 FastAndroidCamera
 FormsViewGroup
+Microcharts.Droid
+SkiaSharp
+SkiaSharp.Views.Android
+SkiaSharp.Views.Forms
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
@@ -42,7 +46,3 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 ZXing.Net.Mobile.Forms.Android
 ZXingNetMobile
-SkiaSharp
-SkiaSharp.Views.Android
-SkiaSharp.Views.Forms
-Microcharts.Droid

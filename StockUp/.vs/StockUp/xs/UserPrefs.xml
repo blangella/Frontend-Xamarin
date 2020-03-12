@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{135DE3E3-A199-4A25-A7B1-5107F2268BE2}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/AdminHomePage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/AnalyticsPage.xaml.cs">
     <Files>
       <File FileName="StockUp/App.xaml" Line="71" Column="59" IsPinned="True" />
       <File FileName="StockUp/App.xaml.cs" Line="6" Column="2" IsPinned="True" />
@@ -14,15 +14,18 @@
       <File FileName="StockUp/Model/User.cs" Line="23" Column="10" />
       <File FileName="StockUp/LoginPage.xaml.cs" Line="1" Column="1" />
       <File FileName="StockUp/AnalyticsPage.xaml" Line="10" Column="1" />
-      <File FileName="StockUp/AnalyticsPage.xaml.cs" Line="40" Column="1" />
-      <File FileName="StockUp/AdminHomePage.xaml" Line="31" Column="27" />
+      <File FileName="StockUp/AnalyticsPage.xaml.cs" Line="42" Column="51" />
+      <File FileName="StockUp/AdminHomePage.xaml" Line="41" Column="1" />
+      <File FileName="StockUp/Model/Ticket.cs" Line="35" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="StockUp" expanded="True">
             <Node name="StockUp" expanded="True">
-              <Node name="AdminHomePage.xaml" selected="True" />
+              <Node name="Model" expanded="True">
+                <Node name="Ticket.cs" selected="True" />
+              </Node>
               <Node name="AnalyticsPage.xaml" expanded="True" />
             </Node>
           </Node>
