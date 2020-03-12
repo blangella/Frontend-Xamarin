@@ -11,14 +11,19 @@
                     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                         <StackLayout Orientation="Horizontal">
                             <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
+
                                 <Label FontSize="18" Text="{Binding Id}" />
                                 <Label FontSize="12" Text="{Binding Status}" />
                             </StackLayout>
                             <Image Margin="0,0,16,0" WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Ticket_Tapped" />
+                                </Image.GestureRecognizers>
                                 <Image.Source>
                                     <FileImageSource File="{Binding IconSource}" />
                                 </Image.Source>
                             </Image>
+
                         </StackLayout>
                     </StackLayout>
                 </ViewCell>

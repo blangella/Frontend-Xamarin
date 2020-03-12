@@ -1,30 +1,23 @@
 ﻿<Properties StartupConfiguration="{135DE3E3-A199-4A25-A7B1-5107F2268BE2}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/HomePage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/ScanSummaryPage.xaml.cs">
     <Files>
       <File FileName="StockUp/App.xaml" Line="71" Column="59" IsPinned="True" />
       <File FileName="StockUp/App.xaml.cs" IsPinned="True" />
-      <File FileName="StockUp/ScanSummaryPage.xaml" Line="29" Column="1" />
-      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="88" Column="59" />
-      <File FileName="StockUp/HomePage.xaml.cs" Line="24" Column="1" />
-      <File FileName="StockUp.iOS/Main.cs" Line="17" Column="1" />
-      <File FileName="StockUp.iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="StockUp/ScanSummaryPage.xaml" Line="34" Column="1" IsPinned="True" />
+      <File FileName="StockUp/Model/Ticket.cs" Line="33" Column="69" IsPinned="True" />
+      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="50" Column="56" IsPinned="True" />
+      <File FileName="StockUp/HomePage.xaml.cs" Line="48" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="StockUp" expanded="True">
             <Node name="StockUp" expanded="True">
-              <Node name="AdminHomePage.xaml" expanded="True" />
-              <Node name="App.xaml" expanded="True" />
-              <Node name="HomePage.xaml" expanded="True">
-                <Node name="HomePage.xaml.cs" selected="True" />
-              </Node>
-              <Node name="ScanSummaryPage.xaml" expanded="True" />
-            </Node>
-            <Node name="StockUp.Android" expanded="True">
-              <Node name="Resources" expanded="True">
-                <Node name="drawable" expanded="True" />
+              <Node name="Model" expanded="True" />
+              <Node name="HomePage.xaml" expanded="True" />
+              <Node name="ScanSummaryPage.xaml" expanded="True">
+                <Node name="ScanSummaryPage.xaml.cs" selected="True" />
               </Node>
             </Node>
             <Node name="StockUp.iOS" expanded="True" />

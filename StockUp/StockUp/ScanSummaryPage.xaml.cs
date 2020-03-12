@@ -2,14 +2,21 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using System.Windows.Input;
+using StockUp.Model;
+using ZXing.Net.Mobile.Forms;
 
 namespace StockUp
 {
+
     public partial class ScanSummaryPage : ContentPage
     {
+        ZXingScannerPage scanPage;
+
         public ScanSummaryPage()
         {
             InitializeComponent();
+
             int cap = 30;
             Ticket[] tickets = new Ticket[cap];
             for (int i = 0; i<cap; i++)
@@ -19,75 +26,25 @@ namespace StockUp
 
             PacketListView.ItemsSource = tickets;
         }
-    }
-}
 
-class Ticket {
-    public string Id
-    {
-        get;
-        set;
-    }
-
-    public string Status
-    {
-        get;
-        set;
-    }
-
-    public Boolean IsChecked
-    {
-        get;
-        set;
-    }
-
-    public int GameNumber
-    {
-        get;
-        set;
-    }
-
-    public int PacketNumber
-    {
-        get;
-        set;
-    }
-
-    public int TicketNumber
-    {
-        get;
-        set;
-    }
-
-    public string IconSource
-    {
-        get;
-        set;
-    }
-
-    public Ticket(int game, int packet, int ticket)
-    {
-        GameNumber = game;
-        PacketNumber = packet;
-        TicketNumber = ticket;
-
-        Id = GameNumber.ToString() +"-"+ PacketNumber.ToString();
-
-        Random rand = new Random();
-        int r = rand.Next(2);  
-        if (r == 0)
+        private async void Ticket_Tapped(object sender, EventArgs e)
         {
-            Status = "Checked";
-            IsChecked = true;
-            IconSource = "Status_Green.png";
-        }
-        else
-        {
-            Status = "Not Checked Yet";
-            IsChecked = false;
-            IconSource = "Status_Red.png";
-        }
+            if (((sender as Image).BindingContext is Ticket _selectedTicket))
+            {
+                //await DisplayAlert("View Profile", String.Format("{0} \n {1}", _selectedTicket.Id, _selectedTicket.Status), "Okay");
+                scanPage = new ZXingScannerPage ();
+                scanPage.OnScanResult += (result) => {
+                    scanPage.IsScanning = false;
 
+                    Device.BeginInvokeOnMainThread (() => {
+                        Navigation.PopModalAsync ();
+                        DisplayAlert("Scanned Barcode", result.Text, "OK");
+                    });
+                };
+
+                await Navigation.PushModalAsync (scanPage);
+                }
+        }
     }
 }
 
