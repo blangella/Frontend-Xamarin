@@ -8,6 +8,13 @@ using StockUp.Model;
 
 namespace StockUp
 {
+
+    /*
+     * TODO: Maybe make admin go to "manage users" page where...
+     *      - there is a list of users
+     *      - click a user -> pop up if they want to delete user
+     *      - add button top right -> modal form sheet of adding a user
+     */
     public partial class ManageUsersPage : ContentPage
     {
         public ManageUsersPage()
