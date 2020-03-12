@@ -40,3 +40,10 @@
 /Users/xavier/.nuget/packages/zxing.net.mobile/2.4.1/lib/Xamarin.iOS10/ZXingNetMobile.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/bin/Debug/netstandard2.0/StockUp.dll
 /Users/xavier/.nuget/packages/xamarin.forms/4.5.0.356/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll
+/Users/xavier/.nuget/packages/microcharts/0.7.1/lib/Xamarin.iOS10/Microcharts.dll
+/Users/xavier/.nuget/packages/skiasharp/1.59.1/lib/XamariniOS/SkiaSharp.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.10.0.21/lib/mono/Xamarin.iOS/Facades/System.ValueTuple.dll
+/Library/Frameworks/Xamarin.iOS.framework/Versions/13.10.0.21/lib/mono/Xamarin.iOS/Facades/System.Linq.dll
+/Users/xavier/.nuget/packages/microcharts.forms/0.7.1/lib/netstandard1.4/Microcharts.Forms.dll
+/Users/xavier/.nuget/packages/skiasharp.views.forms/1.59.1.1/lib/XamariniOS/SkiaSharp.Views.Forms.dll
+/Users/xavier/.nuget/packages/skiasharp.views/1.59.1.1/lib/XamariniOS/SkiaSharp.Views.iOS.dll

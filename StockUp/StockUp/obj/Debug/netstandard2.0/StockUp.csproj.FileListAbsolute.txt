@@ -4,9 +4,12 @@
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/bin/Debug/netstandard2.0/StockUp.pdb
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/AdminHomePage.xaml.g.cs
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/CustomScannerPage.xaml.g.cs
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/HomePage.xaml.g.cs
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/LoginPage.xaml.g.cs
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/ManageUsersPage.xaml.g.cs
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/ScanSummaryPage.xaml.g.cs
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/StockUp.AssemblyInfoInputs.cache
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/StockUp.AssemblyInfo.cs
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/XamlC.stamp
@@ -14,6 +17,4 @@
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/ref/StockUp.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/StockUp.pdb
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/StockUp.csprojAssemblyReference.cache
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/ManageUsersPage.xaml.g.cs
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/ScanSummaryPage.xaml.g.cs
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/CustomScannerPage.xaml.g.cs
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/Debug/netstandard2.0/AnalyticsPage.xaml.g.cs

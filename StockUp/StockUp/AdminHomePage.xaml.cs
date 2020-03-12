@@ -19,9 +19,14 @@ namespace StockUp
             Navigation.PopToRootAsync();
         }
 
-        void ManageUsers_Clicked(System.Object sender, System.EventArgs e)
+        async void ManageUsers_Clicked(System.Object sender, System.EventArgs e)
         {
-            Navigation.PushModalAsync(new ManageUsersPage());
+            await Navigation.PushModalAsync(new ManageUsersPage());
+        }
+
+        async void Analytics_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushAsync(new AnalyticsPage());
         }
     }
 }

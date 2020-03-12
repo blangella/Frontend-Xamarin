@@ -42,3 +42,7 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 ZXing.Net.Mobile.Forms.Android
 ZXingNetMobile
+SkiaSharp
+SkiaSharp.Views.Android
+SkiaSharp.Views.Forms
+Microcharts.Droid

@@ -34,6 +34,7 @@ LinearLayout;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/
 paths;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/39/jl/res/xml/xamarin_essentials_fileprovider_file_paths.xml
 resources;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/40/jl/res/values/styles.xml
 resources;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/42/jl/res/values/strings.xml
+resources;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/47/jl/res/values/strings.xml
 resources;obj/Debug/res/values/colors.xml
 resources;obj/Debug/res/values/styles.xml
 set;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/40/jl/res/anim/enterfromleft.xml
@@ -41,6 +42,7 @@ set;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/
 set;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/40/jl/res/anim/exittoleft.xml
 set;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/40/jl/res/anim/exittoright.xml
 string;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/42/jl/res/values/strings.xml
+string;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/47/jl/res/values/strings.xml
 style;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/40/jl/res/values/styles.xml
 style;obj/Debug/res/values/styles.xml
 translate;/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/lp/40/jl/res/anim/enterfromleft.xml

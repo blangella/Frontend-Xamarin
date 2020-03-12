@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{135DE3E3-A199-4A25-A7B1-5107F2268BE2}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/ManageUsersPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/AdminHomePage.xaml">
     <Files>
       <File FileName="StockUp/App.xaml" Line="71" Column="59" IsPinned="True" />
       <File FileName="StockUp/App.xaml.cs" Line="6" Column="2" IsPinned="True" />
@@ -8,26 +8,23 @@
       <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="53" Column="13" IsPinned="True" />
       <File FileName="StockUp/CustomScannerPage.xaml" Line="13" Column="1" IsPinned="True" />
       <File FileName="StockUp/CustomScannerPage.xaml.cs" Line="22" Column="1" IsPinned="True" />
-      <File FileName="StockUp/ManageUsersPage.xaml" Line="44" Column="1" />
-      <File FileName="StockUp/ManageUsersPage.xaml.cs" Line="38" Column="67" />
-      <File FileName="StockUp/AdminHomePage.xaml.cs" Line="28" Column="1" />
+      <File FileName="StockUp/ManageUsersPage.xaml" Line="12" Column="4" />
+      <File FileName="StockUp/ManageUsersPage.xaml.cs" Line="25" Column="1" />
+      <File FileName="StockUp/AdminHomePage.xaml.cs" Line="20" Column="10" />
       <File FileName="StockUp/Model/User.cs" Line="23" Column="10" />
       <File FileName="StockUp/LoginPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="StockUp/AnalyticsPage.xaml" Line="10" Column="1" />
+      <File FileName="StockUp/AnalyticsPage.xaml.cs" Line="40" Column="1" />
+      <File FileName="StockUp/AdminHomePage.xaml" Line="31" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="StockUp" expanded="True">
             <Node name="StockUp" expanded="True">
-              <Node name="Model" expanded="True" />
-              <Node name="AdminHomePage.xaml" expanded="True" />
-              <Node name="CustomScannerPage.xaml" expanded="True" />
-              <Node name="LoginPage.xaml" expanded="True" />
-              <Node name="ManageUsersPage.xaml" expanded="True">
-                <Node name="ManageUsersPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="AdminHomePage.xaml" selected="True" />
+              <Node name="AnalyticsPage.xaml" expanded="True" />
             </Node>
-            <Node name="StockUp.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
