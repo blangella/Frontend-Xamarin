@@ -16,17 +16,28 @@ namespace StockUp
 
         void Login_Clicked(System.Object sender, System.EventArgs e)
         {
-            if (employee.Text != null && employee.Text.ToLower().Equals("admin"))
+            if (employee.Text != null)
             {
-                NavigationPage page = new NavigationPage(new AdminHomePage());
-                App.Current.MainPage = page;
-                Navigation.PopToRootAsync();
-            }
-            else if (employee.Text != null && !employee.Text.ToLower().Equals("admin"))
-            {
-                NavigationPage page = new NavigationPage(new HomePage());
-                App.Current.MainPage = page;
-                Navigation.PopToRootAsync();
+                string result = DBConncection.Login(employee.Text, password.Text);
+                NavigationPage page;
+                switch (result)
+                {
+                    case null:
+                        DisplayAlert("Error", "Invalid User", "OK");
+                        break;
+                    case "1":
+                        page = new NavigationPage(new AdminHomePage());
+                        App.Current.MainPage = page;
+                        Navigation.PopToRootAsync();
+                        break;
+                    case "0":
+                        page = new NavigationPage(new HomePage());
+                        App.Current.MainPage = page;
+                        Navigation.PopToRootAsync();
+                        break;
+                    default:
+                        break;
+                }
             }
             else
             {
@@ -34,6 +45,5 @@ namespace StockUp
             }
 
         }
-
     }
 }

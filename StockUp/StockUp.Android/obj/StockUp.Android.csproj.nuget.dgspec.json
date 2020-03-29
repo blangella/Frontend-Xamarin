@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/StockUp.Android.csproj": {}
+    "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/StockUp.Android.csproj": {}
   },
   "projects": {
-    "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/StockUp.Android.csproj": {
+    "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/StockUp.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/StockUp.Android.csproj",
+        "projectUniqueName": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/StockUp.Android.csproj",
         "projectName": "StockUp.Android",
-        "projectPath": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/StockUp.Android.csproj",
-        "packagesPath": "/Users/xavier/.nuget/packages/",
-        "outputPath": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/",
+        "projectPath": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/StockUp.Android.csproj",
+        "packagesPath": "/Users/manoharchitoda/.nuget/packages/",
+        "outputPath": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "/Users/xavier/.config/NuGet/NuGet.Config"
+          "/Users/manoharchitoda/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "monoandroid90"
@@ -26,8 +26,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj": {
-                "projectPath": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj"
+              "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj": {
+                "projectPath": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj"
               }
             }
           }
@@ -64,17 +64,20 @@
         }
       }
     },
-    "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj": {
+    "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj",
+        "projectUniqueName": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj",
         "projectName": "StockUp",
-        "projectPath": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj",
-        "packagesPath": "/Users/xavier/.nuget/packages/",
-        "outputPath": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/",
+        "projectPath": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj",
+        "packagesPath": "/Users/manoharchitoda/.nuget/packages/",
+        "outputPath": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/obj/",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/xavier/.config/NuGet/NuGet.Config"
+          "/Users/manoharchitoda/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -104,6 +107,10 @@
               "target": "Package",
               "version": "[0.7.1, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
@@ -112,11 +119,11 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.5.0, )"
+              "version": "[1.5.1, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.5.0.356, )"
+              "version": "[4.5.0.495, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",
@@ -137,7 +144,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.200/RuntimeIdentifierGraph.json"
         }
       }
     }
