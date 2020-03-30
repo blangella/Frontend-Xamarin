@@ -8,7 +8,7 @@ namespace StockUp
 {
     public partial class HomePage : ContentPage
     {
-        ZXingScannerPage scanPage;
+        //ZXingScannerPage scanPage;
         public HomePage()
         {
             InitializeComponent();

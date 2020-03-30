@@ -785,7 +785,6 @@
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CarouselSpacingItemDecoration.java
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CarouselViewRenderer.java
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CarouselViewRenderer_CarouselViewOnScrollListener.java
-/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CarouselViewwOnGlobalLayoutListener.java
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CellAdapter.java
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CellRenderer_RendererHolder.java
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CenterSnapHelper.java
@@ -1107,3 +1106,4 @@
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/assets/System.Xml.XPath.XmlDocument.dll
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/assets/System.Xml.XPath.XmlDocument.pdb
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/assets/Ubiety.Dns.Core.dll
+/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CarouselViewRenderer_CarouselViewwOnGlobalLayoutListener.java

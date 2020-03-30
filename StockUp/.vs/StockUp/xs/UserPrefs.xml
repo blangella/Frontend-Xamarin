@@ -1,18 +1,21 @@
 ﻿<Properties StartupConfiguration="{762CECB2-37A4-4C2D-88E8-5831EB7CE5AB}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.1014cb0c" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/LoginPage.xaml.cs">
     <Files>
-      <File FileName="StockUp/MySQLConnection.cs" Line="17" Column="1" />
-      <File FileName="StockUp/LoginPage.xaml.cs" Line="15" Column="10" />
+      <File FileName="StockUp/LoginPage.xaml.cs" Line="52" Column="20" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="StockUp" expanded="True">
+          <Node name="StockUp" expanded="True" selected="True">
             <Node name="StockUp" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="DBConnections.cs" selected="True" />
-              <Node name="LoginPage.xaml" expanded="True" />
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="StockUp.Android" expanded="True">
+              <Node name="Assets" expanded="True" />
+              <Node name="Properties" expanded="True" />
             </Node>
           </Node>
         </State>

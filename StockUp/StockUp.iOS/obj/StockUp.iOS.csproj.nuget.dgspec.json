@@ -21,6 +21,7 @@
           "xamarinios10"
         ],
         "sources": {
+          "/Users/manoharchitoda/Spring2020/SE": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,13 +45,17 @@
               "target": "Package",
               "version": "[0.7.1, )"
             },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.19, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.5.0, )"
+              "version": "[1.5.2, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[4.5.0.356, )"
+              "version": "[4.5.0.495, )"
             },
             "ZXing.Net.Mobile": {
               "target": "Package",
@@ -94,6 +99,7 @@
           "netstandard2.0"
         ],
         "sources": {
+          "/Users/manoharchitoda/Spring2020/SE": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -130,7 +136,7 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.5.1, )"
+              "version": "[1.5.2, )"
             },
             "Xamarin.Forms": {
               "target": "Package",

@@ -13,7 +13,7 @@
           "Microcharts.Forms": "0.7.1",
           "MySql.Data": "8.0.19",
           "NETStandard.Library": "2.0.3",
-          "Xamarin.Essentials": "1.5.1",
+          "Xamarin.Essentials": "1.5.2",
           "Xamarin.Forms": "4.5.0.495",
           "ZXing.Net.Mobile": "2.4.1",
           "ZXing.Net.Mobile.Forms": "2.4.1"
@@ -842,7 +842,7 @@
           }
         }
       },
-      "Xamarin.Essentials/1.5.1": {
+      "Xamarin.Essentials/1.5.2": {
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
         },
@@ -1388,12 +1388,12 @@
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
     },
-    "Xamarin.Essentials/1.5.1": {
+    "Xamarin.Essentials/1.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XEKAp7BXfZkTGbMqySXtuhwxb06ULjkJNQ8p44e8amOPm4m4VTVV92F13ov0a8NFNU+6JFm98510QK9Q/HBD5A==",
-      "path": "xamarin.essentials/1.5.1",
-      "hashPath": "xamarin.essentials.1.5.1.nupkg.sha512"
+      "sha512": "sha512-qHxkrkx5jIC0X/qWhxCPZ3MuuOJm8bfCzAoUtlpOBSE4oV0JhrkTezK0A+IV+k/MeJ3zKc8FexaIXah9rlCTIw==",
+      "path": "xamarin.essentials/1.5.2",
+      "hashPath": "xamarin.essentials.1.5.2.nupkg.sha512"
     },
     "Xamarin.Forms/4.5.0.495": {
       "type": "package",

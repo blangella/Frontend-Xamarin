@@ -23,6 +23,7 @@
           "netstandard2.0"
         ],
         "sources": {
+          "/Users/manoharchitoda/Spring2020/SE": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +60,7 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.5.1, )"
+              "version": "[1.5.2, )"
             },
             "Xamarin.Forms": {
               "target": "Package",

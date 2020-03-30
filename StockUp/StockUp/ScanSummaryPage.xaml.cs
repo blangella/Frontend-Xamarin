@@ -11,7 +11,7 @@ namespace StockUp
 
     public partial class ScanSummaryPage : ContentPage
     {
-        ZXingScannerPage scanPage;
+        //ZXingScannerPage scanPage;
 
         public ScanSummaryPage()
         {
