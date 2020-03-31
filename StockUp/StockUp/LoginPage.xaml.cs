@@ -56,5 +56,10 @@ namespace StockUp
 
 		}
 
+		async void Create_Clicked(System.Object sender, System.EventArgs e)
+		{
+            await Navigation.PushModalAsync(new SignupPage());
+		}
+
 	}
 }

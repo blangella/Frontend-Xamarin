@@ -53,5 +53,36 @@ namespace StockUp
             return response;
             //Events result = JsonConvert.DeserializeObject<Events>(json);
         }
+        public async Task<HttpResponseMessage[] > PostNewAdmin(string URL, string email, string first, string last, string password)
+        {
+            HttpClient authHttpClient;
+            HttpClient tblHttpClient;
+            
+            // post into user auth model
+            var authURL = URL + "/Users";
+            var authFormContent = new FormUrlEncodedContent(new[]
+                {
+                    new KeyValuePair<string, string>("email", email),
+                    new KeyValuePair<string, string>("password", password),
+                });
+            authHttpClient = new HttpClient();
+            var authResponse = await authHttpClient.PostAsync(authURL, authFormContent);
+
+            // post into tblUser db model
+            var tblURL = URL + "/tblUsers";
+            var tblFormContent = new FormUrlEncodedContent(new[]
+                {
+                    new KeyValuePair<string, string>("IsAdmin", "0"),
+                    new KeyValuePair<string, string>("Emp_id", email),
+                    new KeyValuePair<string, string>("First", first),
+                    new KeyValuePair<string, string>("Last", last),
+                    new KeyValuePair<string, string>("Email", email),
+                    new KeyValuePair<string, string>("Password", password),
+                });
+            tblHttpClient = new HttpClient();
+            var tblResponse = await tblHttpClient.PostAsync(tblURL, tblFormContent);
+
+            return new HttpResponseMessage[] { authResponse, tblResponse };
+        }
     }
 }

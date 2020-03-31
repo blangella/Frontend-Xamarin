@@ -66,6 +66,13 @@
                         Style="{StaticResource primary-button}"
                         Text="login"
                         VerticalOptions="Center" />
+                    <Button
+                        Margin="16,24,16,24"
+                        Clicked="Create_Clicked"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource secondary-button}"
+                        Text="create an account"
+                        VerticalOptions="Center" />
                 </StackLayout>
             </Frame>
 
