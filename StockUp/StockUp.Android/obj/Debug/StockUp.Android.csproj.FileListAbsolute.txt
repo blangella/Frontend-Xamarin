@@ -11,8 +11,6 @@
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/StockUp.Android.csprojAssemblyReference.cache
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/_VerifyXamarinAndroidSupportVersions.stamp
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/stamp/_BuildLibraryImportsCache.stamp
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/resourcepaths.cache
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/resourcecache.stamp
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/res.flag
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/flata/3197A30F3EB8BB0C.stamp
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/flata/3197A30F3EB8BB0C.flata
@@ -441,7 +439,6 @@
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/app_shared_libraries/x86/libxamarin-app.so
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/app_shared_libraries/x86_64/libxamarin-app.so
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/bin/classes.dex
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/stamp/_BuildAdditionalResourcesCache.stamp
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/stamp/_CleanIntermediateIfNuGetsChange.stamp
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/stamp/_CompileToDalvik.stamp
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/stamp/_ConvertCustomView.stamp
@@ -479,7 +476,6 @@
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc64a0e0a82d0db9a07d/ClipboardChangeListener.java
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/NongreedySnapHelper_InitialScrollListener.java
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/FormsVideoView.java
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CarouselViewwOnGlobalLayoutListener.java
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/FormsAnimationDrawable.java
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CarouselViewRenderer_CarouselViewOnScrollListener.java
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/IndicatorViewRenderer.java
@@ -1107,3 +1103,8 @@
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/assets/System.Xml.XPath.XmlDocument.pdb
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/assets/Ubiety.Dns.Core.dll
 /Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CarouselViewRenderer_CarouselViewwOnGlobalLayoutListener.java
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/bin/Debug/com.companyname.stockup.aab
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/StockUp.Android.csproj.CoreCompileInputs.cache
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/assets/Newtonsoft.Json.dll
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/AndroidManifest.xml
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.Android/obj/Debug/android/src/crc643f46942d9dd1fff9/CarouselViewRenderer_CarouselViewwOnGlobalLayoutListener.java

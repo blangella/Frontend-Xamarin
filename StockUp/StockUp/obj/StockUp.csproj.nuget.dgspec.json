@@ -1,29 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj": {}
+    "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj": {}
   },
   "projects": {
-    "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj": {
+    "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj",
+        "projectUniqueName": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj",
         "projectName": "StockUp",
-        "projectPath": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj",
-        "packagesPath": "/Users/manoharchitoda/.nuget/packages/",
-        "outputPath": "/Users/manoharchitoda/Spring2020/SE/Frontend-Xamarin/StockUp/StockUp/obj/",
+        "projectPath": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/StockUp.csproj",
+        "packagesPath": "/Users/xavier/.nuget/packages/",
+        "outputPath": "/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "/Users/manoharchitoda/.config/NuGet/NuGet.Config"
+          "/Users/xavier/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "/Users/manoharchitoda/Spring2020/SE": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,15 +44,15 @@
               "target": "Package",
               "version": "[0.7.1, )"
             },
-            "MySql.Data": {
-              "target": "Package",
-              "version": "[8.0.19, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

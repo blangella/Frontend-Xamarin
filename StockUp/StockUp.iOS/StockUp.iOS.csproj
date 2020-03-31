@@ -156,14 +156,14 @@
     <PackageReference Include="Microcharts">
       <Version>0.7.1</Version>
     </PackageReference>
-    <PackageReference Include="MySql.Data">
-      <Version>8.0.19</Version>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\StockUp\StockUp.csproj">
-      <Project>{B006BF62-F25D-40C8-8B91-4A562FF41333}</Project>
+      <Project>{7AEF4321-44ED-434E-BD4D-72C51117C9CF}</Project>
       <Name>StockUp</Name>
     </ProjectReference>
   </ItemGroup>

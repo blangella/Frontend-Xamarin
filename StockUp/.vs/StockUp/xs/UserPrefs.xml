@@ -1,28 +1,34 @@
 ﻿<Properties StartupConfiguration="{762CECB2-37A4-4C2D-88E8-5831EB7CE5AB}|Default">
-  <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.1014cb0c" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/LoginPage.xaml.cs">
+  <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp.Android/Properties/AndroidManifest.xml">
     <Files>
-      <File FileName="StockUp/LoginPage.xaml.cs" Line="52" Column="20" />
+      <File FileName="StockUp/Model/Ticket.cs" Line="6" Column="9" />
+      <File FileName="StockUp/Model/User.cs" />
+      <File FileName="StockUp/LoginPage.xaml.cs" Line="52" Column="1" />
+      <File FileName="StockUp/RestService.cs" Line="55" Column="36" />
+      <File FileName="StockUp/Model/TicketData.cs" Line="2" Column="7" />
+      <File FileName="StockUp/Model/Constants.cs" Line="12" Column="1" />
+      <File FileName="StockUp.Android/Properties/AndroidManifest.xml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="StockUp" expanded="True" selected="True">
+          <Node name="StockUp" expanded="True">
             <Node name="StockUp" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
+              <Node name="Model" expanded="True" />
             </Node>
             <Node name="StockUp.Android" expanded="True">
-              <Node name="Assets" expanded="True" />
-              <Node name="Properties" expanded="True" />
+              <Node name="Properties" expanded="True">
+                <Node name="AndroidManifest.xml" selected="True" />
+              </Node>
             </Node>
+            <Node name="StockUp.iOS" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.StockUp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BEE77834-E67E-4BFA-B795-74B4ECC2D2FB" />
+  <MonoDevelop.Ide.ItemProperties.StockUp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.918D5A11-8999-4503-9699-8936BF44EFFA" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
