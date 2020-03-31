@@ -35,10 +35,19 @@ namespace StockUp
 				var url = Constants.StockUpEndpoint + "Users/login";
 				//
 				var response = await _restService.PostUserLogin(url, employee.Text, password.Text);
-				if (!string.IsNullOrWhiteSpace(response))
-				{
-					await DisplayAlert("Login", response, "OK");
-				}
+
+                var responseCode = response.IsSuccessStatusCode;
+                if (responseCode)
+                {
+                    var json = await response.Content.ReadAsStringAsync();
+                    await DisplayAlert("Success", json, "OK");
+                    
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Username or Password is incorrect", "OK");
+                }
+				
 			}
 			else
 			{

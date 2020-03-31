@@ -38,7 +38,7 @@ namespace StockUp
             return ticketData;
         }
 
-        public async Task<String> PostUserLogin(string URL, string email, string password)
+        public async Task<HttpResponseMessage> PostUserLogin(string URL, string email, string password)
         {
             var formContent = new FormUrlEncodedContent(new[]
                 {
@@ -50,9 +50,7 @@ namespace StockUp
             //
             var response = await myHttpClient.PostAsync(URL, formContent);
 
-            var json = await response.Content.ReadAsStringAsync();
-
-            return json.ToString();
+            return response;
             //Events result = JsonConvert.DeserializeObject<Events>(json);
         }
     }
