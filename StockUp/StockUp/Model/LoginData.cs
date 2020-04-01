@@ -14,4 +14,10 @@ namespace StockUp.Model
         [JsonProperty("userId")]
         public int UserId { get; set; }
     }
+
+    public class AuthData
+    {
+        [JsonProperty("id")]
+        public string Id { get; set; }
+    }
 }

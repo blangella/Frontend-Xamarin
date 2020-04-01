@@ -18,10 +18,10 @@ namespace StockUp
 
 		async void Login_Clicked(System.Object sender, System.EventArgs e)
 		{
-			if (!string.IsNullOrWhiteSpace(employee.Text) && !string.IsNullOrWhiteSpace(password.Text))
+			if (!string.IsNullOrWhiteSpace(email.Text) && !string.IsNullOrWhiteSpace(password.Text))
 			{
 				_restService = new RestService();
-				var response = await _restService.PostUserLogin(Constants.StockUpEndpoint, employee.Text, password.Text);
+				var response = await _restService.PostUserLogin(Constants.StockUpEndpoint, email.Text, password.Text);
                 var responseCode = response.IsSuccessStatusCode;
 
                 if (responseCode)
@@ -32,7 +32,7 @@ namespace StockUp
                     Constants.APIKey = loginData.Id.ToString();
 
 
-					var userResponse = await _restService.GetUserData(Constants.StockUpEndpoint, employee.Text);
+					var userResponse = await _restService.GetUserData(Constants.StockUpEndpoint, email.Text);
                     var userJson = await userResponse.Content.ReadAsStringAsync();
                     Constants.UserData = JsonConvert.DeserializeObject<UserData>(userJson);
 

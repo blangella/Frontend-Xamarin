@@ -1,13 +1,15 @@
 ﻿<Properties StartupConfiguration="{762CECB2-37A4-4C2D-88E8-5831EB7CE5AB}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/Model/Constants.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/Model/LoginData.cs">
     <Files>
       <File FileName="StockUp/AdminHomePage.xaml.cs" Line="20" Column="10" />
-      <File FileName="StockUp/RestService.cs" Line="67" Column="1" />
-      <File FileName="StockUp/LoginPage.xaml.cs" Line="34" Column="6" />
-      <File FileName="StockUp/HomePage.xaml.cs" Line="45" Column="1" />
-      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="1" Column="1" />
-      <File FileName="StockUp/Model/Constants.cs" Line="8" Column="27" />
+      <File FileName="StockUp/RestService.cs" Line="97" Column="22" />
+      <File FileName="StockUp/LoginPage.xaml" Line="51" Column="47" />
+      <File FileName="StockUp/LoginPage.xaml.cs" Line="32" Column="64" />
+      <File FileName="StockUp/SignupPage.xaml" Line="40" Column="39" />
+      <File FileName="StockUp/SignupPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="StockUp/Model/UserData.cs" Line="8" Column="9" />
+      <File FileName="StockUp/Model/LoginData.cs" Line="18" Column="24" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,11 +17,8 @@
           <Node name="StockUp" expanded="True">
             <Node name="StockUp" expanded="True">
               <Node name="Model" expanded="True">
-                <Node name="Constants.cs" selected="True" />
+                <Node name="LoginData.cs" selected="True" />
               </Node>
-              <Node name="HomePage.xaml" expanded="True" />
-              <Node name="LoginPage.xaml" expanded="True" />
-              <Node name="ScanSummaryPage.xaml" expanded="True" />
             </Node>
           </Node>
         </State>

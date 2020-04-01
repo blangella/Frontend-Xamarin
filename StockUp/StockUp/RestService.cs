@@ -65,7 +65,7 @@ namespace StockUp
             return response;
         }
 
-        // POST a user login, RETURNS json response with potential token
+        // POST a user logout, RETURNS empty response code 204 if success
         public async Task<HttpResponseMessage> PostUserLogout(string URL, string email, string password, string id)
         {
             URL += "Users/logout?access_token=" + id;
@@ -93,6 +93,8 @@ namespace StockUp
                 });
             authHttpClient = new HttpClient();
             var authResponse = await authHttpClient.PostAsync(authURL, authFormContent);
+            var authContent = await authResponse.Content.ReadAsStringAsync();
+            AuthData authData = JsonConvert.DeserializeObject<AuthData>(authContent);
 
             // POST into tblUser db model
             HttpClient tblHttpClient;
@@ -100,7 +102,7 @@ namespace StockUp
             var tblFormContent = new FormUrlEncodedContent(new[]
                 {
                     new KeyValuePair<string, string>("IsAdmin", "1"),
-                    new KeyValuePair<string, string>("Emp_id", email),
+                    new KeyValuePair<string, string>("Emp_id", authData.Id),
                     new KeyValuePair<string, string>("First", first),
                     new KeyValuePair<string, string>("Last", last),
                     new KeyValuePair<string, string>("Email", email),

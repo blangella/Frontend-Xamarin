@@ -46,32 +46,27 @@
                         HorizontalTextAlignment="Center"
                         Text="Login to your account" />
                     <Entry
-                        x:Name="store"
-                        Margin="16,20,16,4"
-                        Placeholder="Store ID"
-                        Text="{Binding StoreID}" />
-                    <Entry
-                        x:Name="employee"
+                        x:Name="email"
                         Margin="16,4,16,4"
-                        Placeholder="Employee ID" />
+                        Placeholder="Email" />
                     <Entry
                         x:Name="password"
                         Margin="16,4,16,4"
                         IsPassword="True"
                         Placeholder="Password" />
                     <Button
-                        Margin="16,24,16,24"
+                        Margin="16,24,16,0"
                         Clicked="Login_Clicked"
                         HorizontalOptions="Center"
                         Style="{StaticResource primary-button}"
                         Text="login"
                         VerticalOptions="Center" />
                     <Button
-                        Margin="16,24,16,24"
+                        Margin="16,4,16,24"
                         Clicked="Create_Clicked"
                         HorizontalOptions="Center"
                         Style="{StaticResource secondary-button}"
-                        Text="create an account"
+                        Text="signup"
                         VerticalOptions="Center" />
                 </StackLayout>
             </Frame>
