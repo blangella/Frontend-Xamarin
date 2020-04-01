@@ -50,7 +50,7 @@ namespace StockUp
                     }
                     else
                     {
-                        await DisplayAlert("Failed", "Could not add user", "OK");
+                        await DisplayAlert("Failed", "Could not add user"+authResponseCode.ToString()+tblResponseCode.ToString(), "OK");
                     }
                     
                 }

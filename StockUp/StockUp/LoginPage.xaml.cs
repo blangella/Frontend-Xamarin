@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using StockUp.Model;
 using Xamarin.Forms;
 
@@ -39,9 +40,27 @@ namespace StockUp
                 var responseCode = response.IsSuccessStatusCode;
                 if (responseCode)
                 {
+					LoginData loginData;
                     var json = await response.Content.ReadAsStringAsync();
-                    await DisplayAlert("Success", json, "OK");
-                    
+                    loginData = JsonConvert.DeserializeObject<LoginData>(json);
+                    Constants.APIKey = loginData.Id.ToString();
+					//await DisplayAlert("Success", loginData.Id, "OK");
+					UserData userData;
+					var userResponse = await _restService.GetUserData(Constants.StockUpEndpoint, employee.Text);
+                    var userJson = await userResponse.Content.ReadAsStringAsync();
+                    userData = JsonConvert.DeserializeObject<UserData>(userJson);
+                    if (userData.IsAdmin == 1)
+                    {
+                        NavigationPage page = new NavigationPage(new AdminHomePage());
+                        App.Current.MainPage = page;
+                        await Navigation.PopToRootAsync();
+                    }
+                    else if (userData.IsAdmin == 0)
+                    {
+                        NavigationPage page = new NavigationPage(new HomePage());
+                        App.Current.MainPage = page;
+                        await Navigation.PopToRootAsync();
+                    }
                 }
                 else
                 {

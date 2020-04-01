@@ -53,6 +53,7 @@ namespace StockUp
             return response;
             //Events result = JsonConvert.DeserializeObject<Events>(json);
         }
+
         public async Task<HttpResponseMessage[] > PostNewAdmin(string URL, string email, string first, string last, string password)
         {
             HttpClient authHttpClient;
@@ -72,7 +73,7 @@ namespace StockUp
             var tblURL = URL + "/tblUsers";
             var tblFormContent = new FormUrlEncodedContent(new[]
                 {
-                    new KeyValuePair<string, string>("IsAdmin", "0"),
+                    new KeyValuePair<string, string>("IsAdmin", "1"),
                     new KeyValuePair<string, string>("Emp_id", email),
                     new KeyValuePair<string, string>("First", first),
                     new KeyValuePair<string, string>("Last", last),
@@ -83,6 +84,14 @@ namespace StockUp
             var tblResponse = await tblHttpClient.PostAsync(tblURL, tblFormContent);
 
             return new HttpResponseMessage[] { authResponse, tblResponse };
+        }
+
+        public async Task<HttpResponseMessage> GetUserData(string URL, string id)
+        {
+            id.Replace("@", "%40");
+            var tblURL = URL + "/tblUsers/" + id + "?" + "access_token="+Constants.APIKey;
+            HttpResponseMessage response = await _client.GetAsync(tblURL);
+            return response;
         }
     }
 }

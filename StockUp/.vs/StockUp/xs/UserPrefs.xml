@@ -1,17 +1,18 @@
 ﻿<Properties StartupConfiguration="{762CECB2-37A4-4C2D-88E8-5831EB7CE5AB}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/RestService.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="StockUp/Model/Ticket.cs" Line="6" Column="9" />
       <File FileName="StockUp/Model/User.cs" Line="1" Column="1" />
       <File FileName="StockUp/LoginPage.xaml" Line="69" Column="28" />
-      <File FileName="StockUp/RestService.cs" Line="79" Column="76" />
-      <File FileName="StockUp/Model/TicketData.cs" Line="2" Column="7" />
-      <File FileName="StockUp/Model/Constants.cs" Line="10" Column="1" />
-      <File FileName="StockUp/SignupPage.xaml.cs" Line="34" Column="1" />
-      <File FileName="StockUp/ManageUsersPage.xaml" Line="58" Column="19" />
+      <File FileName="StockUp/RestService.cs" Line="100" Column="18" />
+      <File FileName="StockUp/Model/TicketData.cs" Line="42" Column="43" />
+      <File FileName="StockUp/Model/Constants.cs" Line="4" Column="34" />
       <File FileName="StockUp/SignupPage.xaml" Line="49" Column="1" />
-      <File FileName="StockUp/LoginPage.xaml.cs" Line="60" Column="4" />
+      <File FileName="StockUp/SignupPage.xaml.cs" Line="47" Column="85" />
+      <File FileName="StockUp/LoginPage.xaml.cs" Line="43" Column="26" />
+      <File FileName="StockUp/ManageUsersPage.xaml" Line="18" Column="73" />
+      <File FileName="StockUp/Model/LoginData.cs" Line="15" Column="26" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,9 +21,10 @@
             <Node name="StockUp" expanded="True">
               <Node name="Model" expanded="True" />
               <Node name="AdminHomePage.xaml" expanded="True" />
-              <Node name="LoginPage.xaml" expanded="True" />
+              <Node name="LoginPage.xaml" expanded="True">
+                <Node name="LoginPage.xaml.cs" selected="True" />
+              </Node>
               <Node name="ManageUsersPage.xaml" expanded="True" />
-              <Node name="RestService.cs" selected="True" />
               <Node name="SignupPage.xaml" expanded="True" />
             </Node>
             <Node name="StockUp.Android" expanded="True">
