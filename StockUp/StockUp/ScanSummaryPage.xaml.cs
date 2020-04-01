@@ -33,6 +33,9 @@ namespace StockUp
                 case Constants.End:
                     PacketListView.ItemsSource = ticketsData.Where(t => t.End_Inv == 1).ToArray();
                     break;
+                case Constants.Inventory:
+                    PacketListView.ItemsSource = ticketsData;
+                    break;
             }
         }
         

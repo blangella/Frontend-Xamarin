@@ -32,6 +32,15 @@ namespace StockUp
                 await DisplayAlert("Error", "Could not sign out", "OK");
             }
         }
+        
+        async void Inventory_Clicked(System.Object sender, System.EventArgs e)
+        {
+            ScanSummaryPage page = new ScanSummaryPage
+            {
+                state = Constants.Inventory
+            };
+            await Navigation.PushAsync(page);
+        }
 
         async void ManageUsers_Clicked(System.Object sender, System.EventArgs e)
         {

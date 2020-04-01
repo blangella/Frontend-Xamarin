@@ -12,7 +12,10 @@
     <StackLayout Margin="24,16,24,0">
         <Frame Style="{StaticResource user-function-frame}">
             <StackLayout>
-                <Button Style="{StaticResource user-function-button}" Text="Inventory" />
+                <Button
+                    Clicked="Inventory_Clicked"
+                    Style="{StaticResource user-function-button}"
+                    Text="Inventory" />
                 <Label Style="{StaticResource user-function-info}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus." />
             </StackLayout>
         </Frame>
