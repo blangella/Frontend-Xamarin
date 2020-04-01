@@ -7,12 +7,12 @@
     Title="Analytics">
     <ScrollView>
         <StackLayout>
-            <microcharts:ChartView x:Name="barChart" HeightRequest="150" />
+            <!--<microcharts:ChartView x:Name="barChart" HeightRequest="150" />
             <microcharts:ChartView x:Name="pointChart" HeightRequest="150" />
-            <microcharts:ChartView x:Name="lineChart" HeightRequest="150" />
+            <microcharts:ChartView x:Name="lineChart" HeightRequest="150" />-->
             <microcharts:ChartView x:Name="donutChart" HeightRequest="150" />
-            <microcharts:ChartView x:Name="radialGaugeChart" HeightRequest="150" />
-            <microcharts:ChartView x:Name="radarChart" HeightRequest="150" />
+            <!--<microcharts:ChartView x:Name="radialGaugeChart" HeightRequest="150" />
+            <microcharts:ChartView x:Name="radarChart" HeightRequest="150" />-->
         </StackLayout>
     </ScrollView>
 

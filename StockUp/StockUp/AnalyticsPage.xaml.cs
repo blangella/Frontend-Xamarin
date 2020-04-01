@@ -13,7 +13,7 @@ namespace StockUp
     public partial class AnalyticsPage : ContentPage
     {
         RestService _restService;
-        List<TicketData[]> groupedTicketsData = new List<TicketData[]>();
+        Dictionary<String, int> groupedTicketsData = new Dictionary<string, int>();
         List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
         //{
         //    new Microcharts.Entry(200)
@@ -41,34 +41,40 @@ namespace StockUp
             InitializeComponent();
             _restService = new RestService();
 
-            for (int i = 0; i<groupedTicketsData.Count; i++)
-            {
-                int value = groupedTicketsData[i].Length;
-                entries.Add(new Microcharts.Entry(value)
-                {
-                    Label = groupedTicketsData[i][0].Name,
-                    ValueLabel = value.ToString(),
-                    Color = SKColor.Parse(Constants.GetRandomColor())
-                });
-            }
-
-            //barChart.Chart = new BarChart() { Entries = entries };
-            //pointChart.Chart = new PointChart() { Entries = entries };
-            //lineChart.Chart = new LineChart() { Entries = entries };
-            donutChart.Chart = new DonutChart() { Entries = entries };
-            //radialGaugeChart.Chart = new RadialGaugeChart() { Entries = entries };
-            //radarChart.Chart = new RadarChart() { Entries = entries };
+            
         }
 
         protected override async void OnAppearing()
         {
             TicketData[] ticketsData = await _restService.GetTicketsData(Constants.StockUpEndpoint, Constants.APIKey);
-            //groupedTicketsData.
+            foreach (TicketData t in ticketsData)
+            {
+                if (groupedTicketsData.ContainsKey(t.Name))
+                {
+                    groupedTicketsData[t.Name]++;
+                }
+                else
+                {
+                    groupedTicketsData.Add(t.Name, 1);
+                }
+            }
 
-            /*
-             *  TODO:
-             *  Find a way to filter through ticketsData and create groupedTicketsData by game number
-             */
+            foreach (KeyValuePair<string, int> group in groupedTicketsData)
+            {
+                int value = group.Value;
+                entries.Add(new Microcharts.Entry(value)
+                {
+                    Label = group.Key,
+                    ValueLabel = value.ToString(),
+                    Color = SKColor.Parse(Constants.GetRandomColor())
+                });
+            }
+            donutChart.Chart = new DonutChart() { Entries = entries };
+            //barChart.Chart = new BarChart() { Entries = entries };
+            //pointChart.Chart = new PointChart() { Entries = entries };
+            //lineChart.Chart = new LineChart() { Entries = entries };
+            //radialGaugeChart.Chart = new RadialGaugeChart() { Entries = entries };
+            //radarChart.Chart = new RadarChart() { Entries = entries };
         }
     }
 }
