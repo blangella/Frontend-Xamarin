@@ -22,7 +22,7 @@ namespace StockUp
         {
             TicketData[] ticketsData = null;
             id.Replace("@", "%40");
-            var getUrl = uri + "tblTickets?access_token=" + id;
+            var getUrl = uri + "tblTickets?" + "access_token=" + id;
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(getUrl);

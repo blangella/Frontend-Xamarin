@@ -1,15 +1,13 @@
 ﻿<Properties StartupConfiguration="{762CECB2-37A4-4C2D-88E8-5831EB7CE5AB}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/ScanSummaryPage.xaml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/HomePage.xaml.cs">
     <Files>
-      <File FileName="StockUp/RestService.cs" Line="41" Column="10" />
-      <File FileName="StockUp/Model/TicketsData.cs" Line="12" Column="1" />
-      <File FileName="StockUp/Model/TicketData.cs" Line="50" Column="69" />
+      <File FileName="StockUp/RestService.cs" Line="27" Column="14" />
       <File FileName="StockUp/Model/Constants.cs" Line="1" Column="1" />
       <File FileName="StockUp/LoginPage.xaml.cs" Line="35" Column="5" />
-      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="20" Column="46" />
-      <File FileName="StockUp/Model/Ticket.cs" Line="41" Column="30" />
-      <File FileName="StockUp/ScanSummaryPage.xaml" Line="20" Column="27" />
+      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="35" Column="27" />
+      <File FileName="StockUp/HomePage.xaml.cs" Line="1" Column="1" />
+      <File FileName="StockUp/ScanSummaryPage.xaml" Line="9" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -17,11 +15,18 @@
           <Node name="StockUp" expanded="True">
             <Node name="StockUp" expanded="True">
               <Node name="Model" expanded="True" />
+              <Node name="HomePage.xaml" expanded="True">
+                <Node name="HomePage.xaml.cs" selected="True" />
+              </Node>
               <Node name="LoginPage.xaml" expanded="True" />
-              <Node name="ScanSummaryPage.xaml" expanded="True" selected="True" />
+              <Node name="ManageUsersPage.xaml" expanded="True" />
+              <Node name="ScanSummaryPage.xaml" expanded="True" />
             </Node>
             <Node name="StockUp.Android" expanded="True">
               <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True">
+                <Node name="drawable" expanded="True" />
+              </Node>
             </Node>
             <Node name="StockUp.iOS" expanded="True" />
           </Node>

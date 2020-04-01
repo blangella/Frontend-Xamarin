@@ -44,5 +44,6 @@ namespace StockUp.Model
         // for UI
         public String Id { get; set; }
         public String IconSource = "Status_Green.png";
+        public String Status { get; set; }
     }
 }

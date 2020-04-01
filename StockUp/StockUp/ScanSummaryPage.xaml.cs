@@ -5,12 +5,14 @@ using Xamarin.Forms;
 using System.Windows.Input;
 using StockUp.Model;
 using ZXing.Net.Mobile.Forms;
+using System.Linq;
 
 namespace StockUp
 {
 
     public partial class ScanSummaryPage : ContentPage
     {
+        public String state;
         //ZXingScannerPage scanPage;
         RestService _restService;
         public ScanSummaryPage()
@@ -23,7 +25,15 @@ namespace StockUp
         protected override async void OnAppearing()
         {
             TicketData[] ticketsData = await _restService.GetTicketsData(Constants.StockUpEndpoint, Constants.APIKey);
-            PacketListView.ItemsSource = ticketsData;
+            switch (state)
+            {
+                case Constants.Start:
+                    PacketListView.ItemsSource = ticketsData.Where(t => t.Start_Inv == 1).ToArray();
+                    break;
+                case Constants.End:
+                    PacketListView.ItemsSource = ticketsData.Where(t => t.End_Inv == 1).ToArray();
+                    break;
+            }
         }
         
 
