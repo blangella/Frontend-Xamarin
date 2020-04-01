@@ -18,16 +18,18 @@ namespace StockUp
             _client = new HttpClient();
         }
 
-        public async Task<TicketData> GetTicketData(string uri)
+        public async Task<TicketData[]> GetTicketsData(string uri, string id)
         {
-            TicketData ticketData = null;
+            TicketData[] ticketsData = null;
+            id.Replace("@", "%40");
+            var getUrl = uri + "tblTickets?access_token=" + id;
             try
             {
-                HttpResponseMessage response = await _client.GetAsync(uri);
+                HttpResponseMessage response = await _client.GetAsync(getUrl);
                 if (response.IsSuccessStatusCode)
                 {
                     string content = await response.Content.ReadAsStringAsync();
-                    ticketData = JsonConvert.DeserializeObject<TicketData>(content);
+                    ticketsData = JsonConvert.DeserializeObject<TicketData[]>(content);
                 }
             }
             catch (Exception ex)
@@ -35,7 +37,7 @@ namespace StockUp
                 Debug.WriteLine("\tERROR {0}", ex.Message);
             }
 
-            return ticketData;
+            return ticketsData;
         }
 
         public async Task<HttpResponseMessage> PostUserLogin(string URL, string email, string password)

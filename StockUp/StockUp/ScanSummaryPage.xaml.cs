@@ -12,20 +12,20 @@ namespace StockUp
     public partial class ScanSummaryPage : ContentPage
     {
         //ZXingScannerPage scanPage;
-
+        RestService _restService;
         public ScanSummaryPage()
         {
             InitializeComponent();
 
-            int cap = 30;
-            Ticket[] tickets = new Ticket[cap];
-            for (int i = 0; i<cap; i++)
-            {
-                tickets[i] = new Ticket(i+300,i+200, i);
-            }
-
-            PacketListView.ItemsSource = tickets;
+            _restService = new RestService();
         }
+
+        protected override async void OnAppearing()
+        {
+            TicketData[] ticketsData = await _restService.GetTicketsData(Constants.StockUpEndpoint, Constants.APIKey);
+            PacketListView.ItemsSource = ticketsData;
+        }
+        
 
         async void Ticket_Tapped(object sender, EventArgs e)
         {

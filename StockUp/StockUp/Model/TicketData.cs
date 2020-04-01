@@ -6,13 +6,13 @@ namespace StockUp.Model
     public class TicketData
     {
         [JsonProperty("Game")]
-        public int Game { get; set; }
+        public int Game { set { Id += value.ToString(); } }
 
         [JsonProperty("Pack")]
-        public int Pack { get; set; }
+        public int Pack { set { Id += value.ToString(); } }
 
         [JsonProperty("Nbr")]
-        public int Nbr { get; set; }
+        public int Nbr { set { Id += value.ToString(); } }
 
         [JsonProperty("Name")]
         public String Name { get; set; }
@@ -40,5 +40,9 @@ namespace StockUp.Model
 
         [JsonProperty("Emp_id")]
         public String Emp_id { get; set; }
+
+        // for UI
+        public String Id { get; set; }
+        public String IconSource = "Status_Green.png";
     }
 }
