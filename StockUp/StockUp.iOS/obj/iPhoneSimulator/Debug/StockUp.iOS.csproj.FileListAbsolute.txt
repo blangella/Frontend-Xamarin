@@ -55,15 +55,17 @@
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/zxing.portable.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/ZXing.Net.Mobile.Forms.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/ZXing.Net.Mobile.Forms.iOS.dll
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/ibtool/_BundleResourceWithLogicalName.items
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/actool/_PartialAppManifest.items
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/actool/_BundleResourceWithLogicalName.items
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/coremlc/_PartialAppManifest.items
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/coremlc/_BundleResourceWithLogicalName.items
-/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.3/optimized/
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/Microcharts.Forms.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/SkiaSharp.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/SkiaSharp.Views.iOS.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/SkiaSharp.Views.Forms.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/Microcharts.dll
 /Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/Microcharts.iOS.dll
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.4/ibtool/_BundleResourceWithLogicalName.items
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.4/actool/_PartialAppManifest.items
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.4/actool/_BundleResourceWithLogicalName.items
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.4/coremlc/_PartialAppManifest.items
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.4/coremlc/_BundleResourceWithLogicalName.items
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/device-builds/iphone 11-13.4/optimized/
+/Users/xavier/Desktop/Frontend-Xamarin/StockUp/StockUp.iOS/obj/iPhoneSimulator/Debug/StockUp.iOS.csproj.CoreCompileInputs.cache
