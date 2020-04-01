@@ -6,11 +6,14 @@ using Xamarin.Forms;
 using Microcharts.Forms;
 using SkiaSharp;
 using Microcharts;
+using StockUp.Model;
 
 namespace StockUp
 {
     public partial class AnalyticsPage : ContentPage
     {
+        RestService _restService;
+        List<TicketData[]> groupedTicketsData = new List<TicketData[]>();
         List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
         //{
         //    new Microcharts.Entry(200)
@@ -36,33 +39,36 @@ namespace StockUp
         public AnalyticsPage()
         {
             InitializeComponent();
+            _restService = new RestService();
 
-            for (int i = 0; i<5; i++)
+            for (int i = 0; i<groupedTicketsData.Count; i++)
             {
-                Random rand = new Random();
-                int value = rand.Next(6);
-                value *= 100;
+                int value = groupedTicketsData[i].Length;
                 entries.Add(new Microcharts.Entry(value)
                 {
-                    Label = "label" + i,
+                    Label = groupedTicketsData[i][0].Name,
                     ValueLabel = value.ToString(),
-                    Color = SKColor.Parse(AnalyticsPage.GetRandomColor())
+                    Color = SKColor.Parse(Constants.GetRandomColor())
                 });
             }
 
-            barChart.Chart = new BarChart() { Entries = entries };
-            pointChart.Chart = new PointChart() { Entries = entries };
-            lineChart.Chart = new LineChart() { Entries = entries };
+            //barChart.Chart = new BarChart() { Entries = entries };
+            //pointChart.Chart = new PointChart() { Entries = entries };
+            //lineChart.Chart = new LineChart() { Entries = entries };
             donutChart.Chart = new DonutChart() { Entries = entries };
-            radialGaugeChart.Chart = new RadialGaugeChart() { Entries = entries };
-            radarChart.Chart = new RadarChart() { Entries = entries };
+            //radialGaugeChart.Chart = new RadialGaugeChart() { Entries = entries };
+            //radarChart.Chart = new RadarChart() { Entries = entries };
         }
 
-        public static String GetRandomColor()
+        protected override async void OnAppearing()
         {
-            var random = new Random();
-            var color = String.Format("#{0:X6}", random.Next(0x1000000)); // = "#A197B9"
-            return color;
+            TicketData[] ticketsData = await _restService.GetTicketsData(Constants.StockUpEndpoint, Constants.APIKey);
+            //groupedTicketsData.
+
+            /*
+             *  TODO:
+             *  Find a way to filter through ticketsData and create groupedTicketsData by game number
+             */
         }
     }
 }

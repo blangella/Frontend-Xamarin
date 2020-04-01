@@ -10,6 +10,13 @@ namespace StockUp.Model
         public const string End = "end";
         public const string Activate = "activate";
         public const string Inventory = "inventory";
+
+        public static String GetRandomColor()
+        {
+            var random = new Random();
+            var color = String.Format("#{0:X6}", random.Next(0x1000000)); // = "#A197B9"
+            return color;
+        }
     }
 
 

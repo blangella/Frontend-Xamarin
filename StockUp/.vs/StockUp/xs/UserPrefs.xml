@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{762CECB2-37A4-4C2D-88E8-5831EB7CE5AB}|Default">
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/ScanSummaryPage.xaml.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/ScanSummaryPage.xaml">
     <Files>
       <File FileName="StockUp/RestService.cs" Line="104" Column="70" IsPinned="True" />
-      <File FileName="StockUp/AdminHomePage.xaml" Line="44" Column="1" IsPinned="True" />
-      <File FileName="StockUp/AdminHomePage.xaml.cs" Line="34" Column="10" IsPinned="True" />
-      <File FileName="StockUp/HomePage.xaml.cs" Line="21" Column="13" IsPinned="True" />
-      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="StockUp/Model/Constants.cs" Line="19" Column="10" IsPinned="True" />
+      <File FileName="StockUp/AnalyticsPage.xaml.cs" Line="65" Column="13" />
+      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="22" Column="13" />
+      <File FileName="StockUp/ScanSummaryPage.xaml" Line="6" Column="17" />
+      <File FileName="StockUp/AnalyticsPage.xaml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -14,10 +15,9 @@
           <Node name="StockUp" expanded="True">
             <Node name="StockUp" expanded="True">
               <Node name="Model" expanded="True" />
-              <Node name="AdminHomePage.xaml" expanded="True" />
-              <Node name="ScanSummaryPage.xaml" expanded="True">
-                <Node name="ScanSummaryPage.xaml.cs" selected="True" />
-              </Node>
+              <Node name="AnalyticsPage.xaml" expanded="True" />
+              <Node name="LoginPage.xaml" expanded="True" />
+              <Node name="ScanSummaryPage.xaml" expanded="True" selected="True" />
             </Node>
           </Node>
         </State>
