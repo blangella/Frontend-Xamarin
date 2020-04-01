@@ -18,6 +18,16 @@ namespace StockUp
             _client = new HttpClient();
         }
 
+        // GET a user data, RETURNS json response
+        public async Task<HttpResponseMessage> GetUserData(string URL, string id)
+        {
+            id.Replace("@", "%40");
+            var tblURL = URL + "/tblUsers/" + id + "?" + "access_token="+Constants.APIKey;
+            HttpResponseMessage response = await _client.GetAsync(tblURL);
+            return response;
+        }
+
+        // GET all tickets from database, RETURNS list of ticket objects
         public async Task<TicketData[]> GetTicketsData(string uri, string id)
         {
             TicketData[] ticketsData = null;
@@ -40,28 +50,41 @@ namespace StockUp
             return ticketsData;
         }
 
+        // POST a user login, RETURNS json response with potential token
         public async Task<HttpResponseMessage> PostUserLogin(string URL, string email, string password)
         {
+            URL += "Users/login?";
             var formContent = new FormUrlEncodedContent(new[]
                 {
                     new KeyValuePair<string, string>("email", email),
                     new KeyValuePair<string, string>("password", password),
                 });
-
             var myHttpClient = new HttpClient();
-            //
             var response = await myHttpClient.PostAsync(URL, formContent);
 
             return response;
-            //Events result = JsonConvert.DeserializeObject<Events>(json);
         }
 
+        // POST a user login, RETURNS json response with potential token
+        public async Task<HttpResponseMessage> PostUserLogout(string URL, string email, string password, string id)
+        {
+            URL += "Users/logout?access_token=" + id;
+            var formContent = new FormUrlEncodedContent(new[]
+                {
+                    new KeyValuePair<string, string>("email", email),
+                    new KeyValuePair<string, string>("password", password),
+                });
+            var myHttpClient = new HttpClient();
+            var response = await myHttpClient.PostAsync(URL, formContent);
+
+            return response;
+        }
+
+        // POST a new admin user, RETURNS array of json responses from two API post requests
         public async Task<HttpResponseMessage[] > PostNewAdmin(string URL, string email, string first, string last, string password)
         {
+            // POST into user auth model
             HttpClient authHttpClient;
-            HttpClient tblHttpClient;
-            
-            // post into user auth model
             var authURL = URL + "/Users";
             var authFormContent = new FormUrlEncodedContent(new[]
                 {
@@ -71,7 +94,8 @@ namespace StockUp
             authHttpClient = new HttpClient();
             var authResponse = await authHttpClient.PostAsync(authURL, authFormContent);
 
-            // post into tblUser db model
+            // POST into tblUser db model
+            HttpClient tblHttpClient;
             var tblURL = URL + "/tblUsers";
             var tblFormContent = new FormUrlEncodedContent(new[]
                 {
@@ -86,14 +110,6 @@ namespace StockUp
             var tblResponse = await tblHttpClient.PostAsync(tblURL, tblFormContent);
 
             return new HttpResponseMessage[] { authResponse, tblResponse };
-        }
-
-        public async Task<HttpResponseMessage> GetUserData(string URL, string id)
-        {
-            id.Replace("@", "%40");
-            var tblURL = URL + "/tblUsers/" + id + "?" + "access_token="+Constants.APIKey;
-            HttpResponseMessage response = await _client.GetAsync(tblURL);
-            return response;
         }
     }
 }

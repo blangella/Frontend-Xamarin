@@ -18,44 +18,31 @@ namespace StockUp
 
 		async void Login_Clicked(System.Object sender, System.EventArgs e)
 		{
-			//if (employee.Text != null && employee.Text.ToLower().Equals("admin"))
-			//{
-			//    NavigationPage page = new NavigationPage(new AdminHomePage());
-			//    App.Current.MainPage = page;
-			//    Navigation.PopToRootAsync();
-			//}
-			//else if (employee.Text != null && !employee.Text.ToLower().Equals("admin"))
-			//{
-			//    NavigationPage page = new NavigationPage(new HomePage());
-			//    App.Current.MainPage = page;
-			//    Navigation.PopToRootAsync();
-			//}
 			if (!string.IsNullOrWhiteSpace(employee.Text) && !string.IsNullOrWhiteSpace(password.Text))
 			{
 				_restService = new RestService();
-				var url = Constants.StockUpEndpoint + "Users/login";
-				//
-				var response = await _restService.PostUserLogin(url, employee.Text, password.Text);
-
+				var response = await _restService.PostUserLogin(Constants.StockUpEndpoint, employee.Text, password.Text);
                 var responseCode = response.IsSuccessStatusCode;
+
                 if (responseCode)
                 {
 					LoginData loginData;
                     var json = await response.Content.ReadAsStringAsync();
                     loginData = JsonConvert.DeserializeObject<LoginData>(json);
                     Constants.APIKey = loginData.Id.ToString();
-					//await DisplayAlert("Success", loginData.Id, "OK");
-					UserData userData;
+
+
 					var userResponse = await _restService.GetUserData(Constants.StockUpEndpoint, employee.Text);
                     var userJson = await userResponse.Content.ReadAsStringAsync();
-                    userData = JsonConvert.DeserializeObject<UserData>(userJson);
-                    if (userData.IsAdmin == 1)
+                    Constants.UserData = JsonConvert.DeserializeObject<UserData>(userJson);
+
+                    if (Constants.UserData.IsAdmin == 1)
                     {
                         NavigationPage page = new NavigationPage(new AdminHomePage());
                         App.Current.MainPage = page;
                         await Navigation.PopToRootAsync();
                     }
-                    else if (userData.IsAdmin == 0)
+                    else if (Constants.UserData.IsAdmin == 0)
                     {
                         NavigationPage page = new NavigationPage(new HomePage());
                         App.Current.MainPage = page;
