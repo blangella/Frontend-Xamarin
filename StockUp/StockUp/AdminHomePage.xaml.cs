@@ -2,21 +2,35 @@
 using System.Collections.Generic;
 
 using Xamarin.Forms;
+using StockUp.Model;
 
 namespace StockUp
 {
     public partial class AdminHomePage : ContentPage
     {
+        RestService _restService;
         public AdminHomePage()
         {
             InitializeComponent();
         }
 
-        void Logout_Clicked(System.Object sender, System.EventArgs e)
+        async void Logout_Clicked(System.Object sender, System.EventArgs e)
         {
-            NavigationPage page = new NavigationPage(new LoginPage());
-            App.Current.MainPage = page;
-            Navigation.PopToRootAsync();
+            _restService = new RestService();
+
+			var response = await _restService.PostUserLogout(Constants.StockUpEndpoint, Constants.UserData.Email, Constants.UserData.Passsword, Constants.APIKey);
+            var responseCode = response.IsSuccessStatusCode;
+
+            if (responseCode)
+            {
+                NavigationPage page = new NavigationPage(new LoginPage());
+                App.Current.MainPage = page;
+                await Navigation.PopToRootAsync();
+            }
+            else
+            {
+                await DisplayAlert("Error", "Could not sign out", "OK");
+            }
         }
 
         async void ManageUsers_Clicked(System.Object sender, System.EventArgs e)
