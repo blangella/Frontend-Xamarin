@@ -44,7 +44,7 @@ namespace StockUp
 
         async void ManageUsers_Clicked(System.Object sender, System.EventArgs e)
         {
-            await Navigation.PushModalAsync(new ManageUsersPage());
+            await Navigation.PushAsync(new ManageUsersPage());
         }
 
         async void Analytics_Clicked(System.Object sender, System.EventArgs e)

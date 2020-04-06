@@ -14,6 +14,8 @@ namespace StockUp
 			InitializeComponent();
 			NavigationPage.SetHasNavigationBar(this, false);
 			BindingContext = new LoginViewModel();
+			Constants.UserData = null;
+			Constants.APIKey = "";
 		}
 
 		async void Login_Clicked(System.Object sender, System.EventArgs e)
@@ -22,6 +24,7 @@ namespace StockUp
 			{
 				_restService = new RestService();
 				var response = await _restService.PostUserLogin(Constants.StockUpEndpoint, email.Text, password.Text);
+				await DisplayAlert("CHECK", email.Text+" "+password.Text+" "+Constants.APIKey+" \n"+Constants.StockUpEndpoint, "ok");
                 var responseCode = response.IsSuccessStatusCode;
 
                 if (responseCode)
@@ -36,6 +39,7 @@ namespace StockUp
                     var userJson = await userResponse.Content.ReadAsStringAsync();
                     Constants.UserData = JsonConvert.DeserializeObject<UserData>(userJson);
 
+					await DisplayAlert("check", Constants.UserData.IsAdmin.ToString()+Constants.UserData.Email, "OK");
                     if (Constants.UserData.IsAdmin == 1)
                     {
                         NavigationPage page = new NavigationPage(new AdminHomePage());

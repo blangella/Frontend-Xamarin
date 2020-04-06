@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="StockUp.AddUserPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout>
+        <Label
+            Margin="0,16,0,0"
+            HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
+            Style="{StaticResource title}"
+            Text="Add Employee" />
+        <ScrollView>
+            <StackLayout Margin="16,16,16,16">
+                <Label Margin="16,12,0,0" Text="Email:" />
+                <Entry
+                    x:Name="email"
+                    Margin="16,0,16,0"
+                    Placeholder="Email" />
+                <Label Margin="16,12,0,0" Text="First Name:" />
+                <Entry
+                    x:Name="firstName"
+                    Margin="16,0,16,0"
+                    Placeholder="First Name" />
+                <Label Margin="16,12,0,0" Text="Last Name:" />
+                <Entry
+                    x:Name="lastName"
+                    Margin="16,0,16,0"
+                    Placeholder="Last Name" />
+                <Label Margin="16,12,0,0" Text="Password:" />
+                <Entry
+                    x:Name="password"
+                    Margin="16,0,16,0"
+                    Placeholder="Password" />
+                <Label Margin="16,12,0,0" Text="Confirm Password:" />
+                <Entry
+                    x:Name="passwordConfirm"
+                    Margin="16,0,16,16"
+                    Placeholder="Password" />
+
+                <Button
+                    Margin="100,8,100,0"
+                    Clicked="Cancel_Clicked"
+                    Style="{StaticResource secondary-button}"
+                    Text="Cancel" />
+                <Button
+                    Margin="100,0,100,0"
+                    Clicked="Confirm_Clicked"
+                    Style="{StaticResource primary-button}"
+                    Text="Confirm" />
+            </StackLayout>
+        </ScrollView>
+
+    </StackLayout>
+</ContentPage>

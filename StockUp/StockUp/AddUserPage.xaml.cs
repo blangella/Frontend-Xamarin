@@ -7,11 +7,10 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace StockUp
 {
-    public partial class SignupPage : ContentPage
+    public partial class AddUserPage : ContentPage
     {
-		RestService _restService;
-
-        public SignupPage()
+        RestService _restService;
+        public AddUserPage()
         {
             InitializeComponent();
             On<iOS>().SetModalPresentationStyle(UIModalPresentationStyle.FormSheet);
@@ -34,7 +33,7 @@ namespace StockUp
                 {
                     //User user = new User(employeeID.Text, firstName.Text, lastName.Text, email.Text, adminValue, password.Text);
                     _restService = new RestService();
-                    var response = await _restService.PostNewUser(Constants.StockUpEndpoint, email.Text, firstName.Text, lastName.Text, password.Text, "1");
+                    var response = await _restService.PostNewUser(Constants.StockUpEndpoint, email.Text, firstName.Text, lastName.Text, password.Text, "0");
 
                     var authResponseCode = response[0].IsSuccessStatusCode;
                     var tblResponseCode = response[1].IsSuccessStatusCode;

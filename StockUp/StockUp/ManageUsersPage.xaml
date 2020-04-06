@@ -3,57 +3,36 @@
     x:Class="StockUp.ManageUsersPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Clicked="Add_Clicked"
+            IconImageSource=""
+            Text="Add" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="PacketListView" RowHeight="75">
+        <!--<ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
 
-        <Label
-            Margin="0,16,0,0"
-            HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"
-            Style="{StaticResource title}"
-            Text="Add or Remove a User" />
-        <ScrollView>
-            <StackLayout Margin="16,16,16,16">
+                                <Label FontSize="18" Text="{Binding First}" />
+                                <Label FontSize="12" Text="{Binding Email}" />
+                            </StackLayout>
+                            <Image Margin="0,0,16,0" WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Ticket_Tapped" />
+                                </Image.GestureRecognizers>
+                                <Image.Source>
+                                    <FileImageSource File="{Binding Emp_id}" />
+                                </Image.Source>
+                            </Image>
 
-                <StackLayout Margin="16,8,16,0" Orientation="Horizontal">
-                    <Switch x:Name="addOrRemoveUser" IsEnabled="True" />
-                    <Label Text="Add or Remove User" />
-                </StackLayout>
-                <StackLayout Margin="16,8,16,0" Orientation="Horizontal">
-                    <Switch x:Name="adminOrUser" IsEnabled="True" />
-                    <Label Text="Admin or User" />
-                </StackLayout>
-
-                <Label Text="Employee ID:" />
-                <Entry x:Name="employeeID" Placeholder="Employee ID" />
-                <Label Margin="0,12,0,0" Text="Email:" />
-                <Entry x:Name="email" Placeholder="Email" />
-                <Label Margin="0,12,0,0" Text="First Name:" />
-                <Entry x:Name="firstName" Placeholder="First Name" />
-                <Label Margin="0,12,0,0" Text="Last Name:" />
-                <Entry x:Name="lastName" Placeholder="Last Name" />
-                <Label Margin="0,12,0,0" Text="Password:" />
-                <Entry
-                    x:Name="password"
-                    Margin="0,0,0,0"
-                    Placeholder="Password" />
-                <Label Margin="0,12,0,0" Text="Confirm Password:" />
-                <Entry
-                    x:Name="passwordConfirm"
-                    Margin="0,0,0,16"
-                    Placeholder="Password" />
-
-                <Button
-                    Margin="100,8,100,0"
-                    Clicked="Cancel_Clicked"
-                    Style="{StaticResource secondary-button}"
-                    Text="Cancel" />
-                <Button
-                    Margin="100,0,100,0"
-                    Clicked="Confirm_Clicked"
-                    Style="{StaticResource primary-button}"
-                    Text="Confirm" />
-            </StackLayout>
-        </ScrollView>
-
-    </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>-->
+    </ListView>
 </ContentPage>

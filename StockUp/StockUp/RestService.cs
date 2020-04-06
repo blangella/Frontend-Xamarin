@@ -22,7 +22,10 @@ namespace StockUp
         public async Task<HttpResponseMessage> GetUserData(string URL, string id)
         {
             id.Replace("@", "%40");
-            var tblURL = URL + "/tblUsers/" + id + "?" + "access_token="+Constants.APIKey;
+            Debug.Write("TEST USER "+URL);
+            Debug.Write("TEST USER " + id);
+            var tblURL = URL + "tblUsers/" + id + "?" + "access_token="+Constants.APIKey;
+            Debug.Write("TEST URL: " + tblURL);
             HttpResponseMessage response = await _client.GetAsync(tblURL);
             return response;
         }
@@ -53,7 +56,9 @@ namespace StockUp
         // POST a user login, RETURNS json response with potential token
         public async Task<HttpResponseMessage> PostUserLogin(string URL, string email, string password)
         {
-            URL += "Users/login?";
+            URL += "Users/login";
+            Debug.Write("TEST"+URL);
+            Debug.Write("TEST"+email + " " + password);
             var formContent = new FormUrlEncodedContent(new[]
                 {
                     new KeyValuePair<string, string>("email", email),
@@ -81,7 +86,7 @@ namespace StockUp
         }
 
         // POST a new admin user, RETURNS array of json responses from two API post requests
-        public async Task<HttpResponseMessage[] > PostNewAdmin(string URL, string email, string first, string last, string password)
+        public async Task<HttpResponseMessage[] > PostNewUser(string URL, string email, string first, string last, string password, string IsAdmin)
         {
             // POST into user auth model
             HttpClient authHttpClient;
@@ -101,7 +106,7 @@ namespace StockUp
             var tblURL = URL + "/tblUsers";
             var tblFormContent = new FormUrlEncodedContent(new[]
                 {
-                    new KeyValuePair<string, string>("IsAdmin", "1"),
+                    new KeyValuePair<string, string>("IsAdmin", IsAdmin),
                     new KeyValuePair<string, string>("Emp_id", authData.Id),
                     new KeyValuePair<string, string>("First", first),
                     new KeyValuePair<string, string>("Last", last),
