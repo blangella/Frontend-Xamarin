@@ -22,12 +22,31 @@ namespace StockUp
         public async Task<HttpResponseMessage> GetUserData(string URL, string id)
         {
             id.Replace("@", "%40");
-            Debug.Write("TEST USER "+URL);
-            Debug.Write("TEST USER " + id);
             var tblURL = URL + "tblUsers/" + id + "?" + "access_token="+Constants.APIKey;
-            Debug.Write("TEST URL: " + tblURL);
             HttpResponseMessage response = await _client.GetAsync(tblURL);
             return response;
+        }
+
+        // GET a user data, RETURNS json response
+        public async Task<UserData[]> GetUsersData(string URL, string id)
+        {
+            UserData[] usersData = null;
+            id.Replace("@", "%40");
+            var tblURL = URL + "tblUsers/?access_token="+Constants.APIKey;
+            try
+            {
+                HttpResponseMessage response = await _client.GetAsync(tblURL);
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    usersData = JsonConvert.DeserializeObject<UserData[]>(content);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("\tERROR {0}", ex.Message);
+            }
+            return usersData;
         }
 
         // GET all tickets from database, RETURNS list of ticket objects
@@ -57,8 +76,6 @@ namespace StockUp
         public async Task<HttpResponseMessage> PostUserLogin(string URL, string email, string password)
         {
             URL += "Users/login";
-            Debug.Write("TEST"+URL);
-            Debug.Write("TEST"+email + " " + password);
             var formContent = new FormUrlEncodedContent(new[]
                 {
                     new KeyValuePair<string, string>("email", email),

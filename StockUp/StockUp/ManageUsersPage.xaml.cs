@@ -17,11 +17,18 @@ namespace StockUp
      */
     public partial class ManageUsersPage : ContentPage
     {
+        RestService _restService;
         public ManageUsersPage()
         {
             InitializeComponent();
-        }
 
+            _restService = new RestService();
+        }
+        protected override async void OnAppearing()
+        {
+            UserData[] usersData = await _restService.GetUsersData(Constants.StockUpEndpoint, Constants.APIKey);
+            UserListView.ItemsSource = usersData;
+        }
         async void Add_Clicked(System.Object sender, System.EventArgs e)
         {
             await Navigation.PushModalAsync(new AddUserPage());
