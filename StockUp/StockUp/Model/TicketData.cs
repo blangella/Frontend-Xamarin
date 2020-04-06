@@ -10,7 +10,7 @@ namespace StockUp.Model
 
         [JsonProperty("Pack")]
         public int Pack { set { Id += value.ToString(); } }
-
+        //
         [JsonProperty("Nbr")]
         public int Nbr { set { Id += value.ToString(); } }
 
