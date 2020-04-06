@@ -135,5 +135,24 @@ namespace StockUp
 
             return new HttpResponseMessage[] { authResponse, tblResponse };
         }
+
+
+        // GET a user data, RETURNS json response
+        public async Task<HttpResponseMessage[]> DeleteUserData(string URL, string id, string email)
+        {
+            // POST into user auth model
+            HttpClient authHttpClient;
+            var authURL = URL + "Users/"+id+"?access_token="+Constants.APIKey;
+            authHttpClient = new HttpClient();
+            var authResponse = await authHttpClient.DeleteAsync(authURL);
+
+            // POST into tblUser db model
+            HttpClient tblHttpClient;
+            var tblURL = URL + "tblUsers/"+email.Replace("@", "%40")+"?access_token"+Constants.APIKey;
+            tblHttpClient = new HttpClient();
+            var tblResponse = await tblHttpClient.DeleteAsync(tblURL);
+
+            return new HttpResponseMessage[] { authResponse, tblResponse };
+        }
     }
 }

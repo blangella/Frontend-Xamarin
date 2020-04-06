@@ -16,7 +16,6 @@
                     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                         <StackLayout Orientation="Horizontal">
                             <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
-
                                 <Label FontSize="18" Text="{Binding First}" />
                                 <Label FontSize="12" Text="{Binding Email}" />
                             </StackLayout>
