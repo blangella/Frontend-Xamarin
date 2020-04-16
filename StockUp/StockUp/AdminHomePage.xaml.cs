@@ -52,6 +52,7 @@ namespace StockUp
 
         protected override async void OnAppearing()
         {
+			base.OnAppearing();
 			_restService = new RestService();
             var response = await _restService.GetAllGames();
 			string content = await response.Content.ReadAsStringAsync();

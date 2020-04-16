@@ -73,6 +73,7 @@ namespace StockUp
 							//}
 							if (state.Equals(Constants.End))
 							{
+								ticket.Id = ticket.Game.ToString() + ticket.Pack.ToString() + ticket.Nbr.ToString();
 								ScanSummaryPage.tickets.Add(ticket);
 								await DisplayAlert("Added", ticket.ToString(), "OK");
 							}
@@ -88,6 +89,8 @@ namespace StockUp
 							};
 							if (state.Equals(Constants.End))
 							{
+								ticket.Id = ticket.Game.ToString() + ticket.Pack.ToString() + ticket.Nbr.ToString();
+
 								ScanSummaryPage.tickets.Add(ticket);
 								await DisplayAlert("Added", ticket.ToString(), "OK");
 							}

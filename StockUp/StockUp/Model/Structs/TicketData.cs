@@ -6,13 +6,13 @@ namespace StockUp.Model
 public class TicketData
 	{
 		[JsonProperty("Game")]
-		public int Game { set { Id += value.ToString(); } get { return Game; }}
+		public int Game { get; set;}
 
 		[JsonProperty("Pack")]
-		public int Pack { set { Id += value.ToString(); } get { return Pack; }}
+		public int Pack { get; set;}
 		//
 		[JsonProperty("Nbr")]
-		public int Nbr { set { Id += value.ToString(); } get { return Nbr; } }
+		public int Nbr { get; set; }
 
 		[JsonProperty("Name")]
 		public String Name { get; set; }

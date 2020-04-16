@@ -30,11 +30,13 @@ public partial class ScanSummaryPage : ContentPage
 
 		protected override async void OnAppearing()
 		{
+			base.OnAppearing();
 			_restService = new RestService();
 			HttpResponseMessage responseGames = await _restService.GetAllGames();
 			string contentGames = await responseGames.Content.ReadAsStringAsync();
 			contentGames = Constants.TakeOutHeaderJSON(contentGames);
 			allGames = JsonConvert.DeserializeObject<GameNamePriceData[]>(contentGames);
+            
 			for (int j = 0; j < allGames.Length; j++)
 			{
 				GameNamePriceData curr = allGames[j];
@@ -98,6 +100,8 @@ public partial class ScanSummaryPage : ContentPage
 
 		async void Confirm_Clicked(System.Object sender, System.EventArgs e)
 		{
+			await DisplayAlert("Confirm All Scans", "Are you sure you want to confirm?", "OK");
+
 			switch (state)
 			{
 				case Constants.End:
@@ -113,7 +117,6 @@ public partial class ScanSummaryPage : ContentPage
 					}
 					break;
 			}
-			await DisplayAlert("Confirm All Scans", "Are you sure you want to confirm?", "OK");
 		}
 	}
 }
