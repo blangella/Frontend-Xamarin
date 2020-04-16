@@ -23,6 +23,7 @@ namespace StockUp
         AnalyticsData[] gameCounts;
         AnalyticsData[] bestGames = new AnalyticsData[5];
         AnalyticsData[] worstGames = new AnalyticsData[5];
+        bool initialized = false;
 
         //{
         //    new Microcharts.Entry(200)
@@ -48,6 +49,7 @@ namespace StockUp
         public AnalyticsPage()
         {
             InitializeComponent();
+            initialized = true;
         }
 
         protected override async void OnAppearing()
@@ -55,20 +57,28 @@ namespace StockUp
             base.OnAppearing();
             _restService = new RestService();
 
+            entries.Clear();
+            gameCounts = null;
+            bestGames = new AnalyticsData[5];
+            worstGames = new AnalyticsData[5];
+            HttpResponseMessage response = null;
+
             switch (TimePicker.SelectedIndex)
             {
                 case 0:
-                    await DisplayAlert("Caught", "0", "OK");
+                    response = await _restService.GetDailyCounts();
                     break;
                 case 1:
-                    await DisplayAlert("Caught", "1", "OK");
+                    response = await _restService.GetWeeklyCounts();
                     break;
                 case 2:
-                    await DisplayAlert("Caught", "2", "OK");
+                    response = await _restService.GetMonthlyCounts();
+                    break;
+                default:
+                    response = await _restService.GetMonthlyCounts();
                     break;
             }
 
-            HttpResponseMessage response = await _restService.GetMonthlyCounts();
 			string content = await response.Content.ReadAsStringAsync();
             content = Constants.TakeOutHeaderJSON(content);
 			gameCounts = JsonConvert.DeserializeObject<AnalyticsData[]>(content);
@@ -100,7 +110,16 @@ namespace StockUp
                 }
             }
 
-            for (int i = 0; i<5; i++)
+            var cap = 0;
+            if(gameCounts.Length < 5)
+            {
+                cap = gameCounts.Length;
+            }
+            else
+            {
+                cap = 5;
+            }
+            for (int i = 0; i<cap; i++)
             {
                 int value = gameCounts[i].SumFinalTotal;
                 entries.Add(new Microcharts.Entry(value)
@@ -135,6 +154,13 @@ namespace StockUp
             //lineChart.Chart = new LineChart() { Entries = entries };
             radialGaugeChart.Chart = new RadialGaugeChart() {LabelTextSize = 30f, BackgroundColor = SKColor.Parse("#00FFFFFF"),  Entries = entries };
             //radarChart.Chart = new RadarChart() { Entries = entries };
+        }
+
+        void TimePicker_SelectedIndexChanged(System.Object sender, System.EventArgs e)
+        {
+            if (initialized) {
+                this.OnAppearing();
+            }
         }
     }
 }

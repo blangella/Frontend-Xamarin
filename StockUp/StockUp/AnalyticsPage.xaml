@@ -13,7 +13,10 @@
                         HorizontalOptions="Center"
                         Style="{StaticResource title}"
                         Text="Overview" />
-                    <Picker x:Name="TimePicker" HorizontalOptions="Center">
+                    <Picker
+                        x:Name="TimePicker"
+                        HorizontalOptions="Center"
+                        SelectedIndexChanged="TimePicker_SelectedIndexChanged">
                         <Picker.Items>
                             <x:String>Ticket Data Today</x:String>
                             <x:String>Ticket Data This Week</x:String>
@@ -39,7 +42,7 @@
                             Text="Best and Worst Games" />
                         <StackLayout Orientation="Horizontal">
                             <StackLayout Orientation="Vertical">
-                                <Label Text="Best Five" />
+                                <Label Text="Best" />
                                 <ListView
                                     x:Name="BestListView"
                                     RowHeight="50"
@@ -62,7 +65,7 @@
                                 </ListView>
                             </StackLayout>
                             <StackLayout Orientation="Vertical">
-                                <Label Text="Worst Five" />
+                                <Label Text="Worst" />
                                 <ListView
                                     x:Name="WorstListView"
                                     RowHeight="50"
