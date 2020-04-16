@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace StockUp.Model
 {
@@ -13,12 +15,29 @@ namespace StockUp.Model
 		public const string End = "end";
 		public const string Activate = "activate";
 		public const string Inventory = "inventory";
+		public static Dictionary<int, string> gamesAndNames = new Dictionary<int, string>();
+		public static Dictionary<int, string> gamesAndPrices = new Dictionary<int, string>();
 
 		public static String GetRandomColor()
 		{
 			var random = new Random();
 			var color = String.Format("#{0:X6}", random.Next(0x1000000)); // = "#A197B9"
 			return color;
+		}
+
+		public static void InitializeAllGames(string content)
+		{
+			GameNamePriceData[] games = JsonConvert.DeserializeObject<GameNamePriceData[]>(content);
+			Debug.Write("In Initialize");
+			for (int i = 0; i < games.Length; i++)
+			{
+                if (!gamesAndNames.ContainsKey(games[i].Game))
+                {
+				    Debug.Write("Adding");
+				    gamesAndNames.Add(games[i].Game, games[i].Name);
+				    gamesAndPrices.Add(games[i].Game, games[i].Price);
+                }
+			}
 		}
 
 		public static String TakeOutHeaderJSON(String JSON)

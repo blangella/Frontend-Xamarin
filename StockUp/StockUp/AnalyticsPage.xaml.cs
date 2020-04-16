@@ -7,6 +7,11 @@ using Microcharts.Forms;
 using SkiaSharp;
 using Microcharts;
 using StockUp.Model;
+using System.Net.Http;
+using Newtonsoft.Json;
+using StockUp.Model.Structs;
+using System.Linq;
+using System.Diagnostics;
 
 namespace StockUp
 {
@@ -15,6 +20,11 @@ namespace StockUp
         RestService _restService;
         Dictionary<String, int> groupedTicketsData = new Dictionary<string, int>();
         List<Microcharts.Entry> entries = new List<Microcharts.Entry>();
+        AnalyticsData[] gameCounts;
+        AnalyticsData[] bestGames = new AnalyticsData[5];
+        AnalyticsData[] worstGames = new AnalyticsData[5];
+        int averageTicketsSoldPerGame;
+
         //{
         //    new Microcharts.Entry(200)
         //    {
@@ -46,25 +56,39 @@ namespace StockUp
 
         protected override async void OnAppearing()
         {
-            TicketData[] ticketsData = await _restService.GetTicketsData(Constants.StockUpEndpoint, Constants.APIKey);
-            foreach (TicketData t in ticketsData)
+            HttpResponseMessage response = await _restService.GetMonthlyCounts();
+			string content = await response.Content.ReadAsStringAsync();
+            content = Constants.TakeOutHeaderJSON(content);
+			gameCounts = JsonConvert.DeserializeObject<AnalyticsData[]>(content);
+
+            var sortedAsc = gameCounts.OrderBy(g => g.SumFinalTotal).ToList();
+            gameCounts = sortedAsc.ToArray();
+
+            for (int i = 0; i<gameCounts.Length; i++)
             {
-                if (groupedTicketsData.ContainsKey(t.Name))
+                if (i < 5)
                 {
-                    groupedTicketsData[t.Name]++;
-                }
-                else
-                {
-                    groupedTicketsData.Add(t.Name, 1);
+                    worstGames[i] = gameCounts[i];
                 }
             }
 
-            foreach (KeyValuePair<string, int> group in groupedTicketsData)
+            var sortedDesc = gameCounts.OrderByDescending(g => g.SumFinalTotal).ToList();
+            gameCounts = sortedDesc.ToArray();
+
+            for (int i = 0; i<gameCounts.Length; i++)
             {
-                int value = group.Value;
+                if (i < 5)
+                {
+                    bestGames[i] = gameCounts[i];
+                }
+            }
+
+            for (int i = 0; i<15; i++)
+            {
+                int value = gameCounts[i].SumFinalTotal;
                 entries.Add(new Microcharts.Entry(value)
                 {
-                    Label = group.Key,
+                    Label = Constants.gamesAndNames[gameCounts[i].Game],
                     ValueLabel = value.ToString(),
                     Color = SKColor.Parse(Constants.GetRandomColor())
                 });

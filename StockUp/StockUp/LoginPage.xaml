@@ -5,9 +5,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:StockUp"
     Style="{StaticResource primary-content}">
-    <ContentPage.BindingContext>
-        <local:LoginViewModel />
-    </ContentPage.BindingContext>
     <RelativeLayout
         Padding="0"
         HorizontalOptions="FillAndExpand"

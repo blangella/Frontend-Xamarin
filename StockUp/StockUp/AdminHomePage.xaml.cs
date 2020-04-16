@@ -49,5 +49,14 @@ namespace StockUp
 		{
 			await Navigation.PushAsync(new AnalyticsPage());
 		}
+
+        protected override async void OnAppearing()
+        {
+			_restService = new RestService();
+            var response = await _restService.GetAllGames();
+			string content = await response.Content.ReadAsStringAsync();
+			content = Constants.TakeOutHeaderJSON(content);
+			Constants.InitializeAllGames(content);
+        }
 	}
 }
