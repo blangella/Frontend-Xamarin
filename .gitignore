@@ -1,0 +1,16 @@
+
+*.json
+*.xml
+*.apk
+*.dll
+*.pdb
+*.deployment
+*.zip
+*.o
+*.s
+*.o
+*.s
+*.so
+*.txt
+*.cache
+*.pdb

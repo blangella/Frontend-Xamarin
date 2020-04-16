@@ -2,7 +2,8 @@
 <ContentPage
     x:Class="StockUp.ManageUsersPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Users">
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Clicked="Add_Clicked"
@@ -21,11 +22,11 @@
                             </StackLayout>
                             <Image Margin="0,0,16,0" WidthRequest="20">
                                 <!--<Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="Ticket_Tapped" />
-                                </Image.GestureRecognizers>-->
+									<TapGestureRecognizer Tapped="Ticket_Tapped" />
+								</Image.GestureRecognizers>-->
                                 <!--<Image.Source>
-                                    <FileImageSource File="{Binding Emp_id}" />
-                                </Image.Source>-->
+									<FileImageSource File="{Binding Emp_id}" />
+								</Image.Source>-->
                             </Image>
 
                         </StackLayout>
