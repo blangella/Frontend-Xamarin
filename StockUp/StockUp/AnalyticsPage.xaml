@@ -7,16 +7,68 @@
     Title="Analytics">
     <ScrollView>
         <StackLayout>
-            <!--<microcharts:ChartView x:Name="barChart" HeightRequest="150" />
+            <StackLayout>
+                <!--<microcharts:ChartView x:Name="barChart" HeightRequest="150" />
             <microcharts:ChartView x:Name="pointChart" HeightRequest="150" />
             <microcharts:ChartView x:Name="lineChart" HeightRequest="150" />-->
-            <microcharts:ChartView x:Name="donutChart" HeightRequest="150" />
-            <!--<microcharts:ChartView x:Name="radialGaugeChart" HeightRequest="150" />
+                <microcharts:ChartView x:Name="donutChart" HeightRequest="150" />
+                <!--<microcharts:ChartView x:Name="radialGaugeChart" HeightRequest="150" />
             <microcharts:ChartView x:Name="radarChart" HeightRequest="150" />-->
+            </StackLayout>
+            <StackLayout>
+                <Label Text="Overview" />
+                <StackLayout HeightRequest="300" Orientation="Horizontal">
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Top Five Popular Games" />
+                        <ListView x:Name="BestListView" RowHeight="50">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
+                                                    <Label FontSize="12" Text="{Binding Name}" />
+                                                    <Label FontSize="10" Text="{Binding SumFinalTotal}" />
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Top Five Unpopular Games" />
+                        <ListView x:Name="WorstListView" RowHeight="50">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
+                                                    <Label FontSize="12" Text="{Binding Name}" />
+                                                    <Label FontSize="10" Text="{Binding SumFinalTotal}" />
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Average tickets sold per game" />
+                    <Label x:Name="averageTickets" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Total revenue from tickets sold" />
+                    <Label x:Name="totalRevenue" />
+                </StackLayout>
+            </StackLayout>
         </StackLayout>
     </ScrollView>
-
-
-
-
 </ContentPage>

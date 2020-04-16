@@ -10,5 +10,7 @@ namespace StockUp.Model.Structs
 
 		[JsonProperty("Game")]
 		public int Game { get; set; }
+
+        public String Name { get; set; }
     }
 }

@@ -23,7 +23,6 @@ namespace StockUp
         AnalyticsData[] gameCounts;
         AnalyticsData[] bestGames = new AnalyticsData[5];
         AnalyticsData[] worstGames = new AnalyticsData[5];
-        int averageTicketsSoldPerGame;
 
         //{
         //    new Microcharts.Entry(200)
@@ -49,13 +48,12 @@ namespace StockUp
         public AnalyticsPage()
         {
             InitializeComponent();
-            _restService = new RestService();
-
-            
         }
 
         protected override async void OnAppearing()
         {
+            base.OnAppearing();
+            _restService = new RestService();
             HttpResponseMessage response = await _restService.GetMonthlyCounts();
 			string content = await response.Content.ReadAsStringAsync();
             content = Constants.TakeOutHeaderJSON(content);
@@ -63,6 +61,11 @@ namespace StockUp
 
             var sortedAsc = gameCounts.OrderBy(g => g.SumFinalTotal).ToList();
             gameCounts = sortedAsc.ToArray();
+
+            for (int i = 0; i<gameCounts.Length; i++)
+            {
+                gameCounts[i].Name = Constants.gamesAndNames[gameCounts[i].Game];
+            }
 
             for (int i = 0; i<gameCounts.Length; i++)
             {
@@ -93,7 +96,25 @@ namespace StockUp
                     Color = SKColor.Parse(Constants.GetRandomColor())
                 });
             }
+
+            int gamesSum = 0;
+            int revenueSum = 0;
+            for (int i = 0; i<gameCounts.Length; i++)
+            {
+                gamesSum += gameCounts[i].SumFinalTotal;
+                var price = Constants.gamesAndPrices[gameCounts[i].Game];
+                Debug.Write("PRICE: " + price);
+                
+                revenueSum += Convert.ToInt32(price);
+            }
+
+            var avg = (gamesSum / gameCounts.Length);
+            averageTickets.Text = avg.ToString();
+            totalRevenue.Text = "$"+revenueSum.ToString();
             donutChart.Chart = new DonutChart() { Entries = entries };
+
+            BestListView.ItemsSource = bestGames;
+            WorstListView.ItemsSource = worstGames;
             //barChart.Chart = new BarChart() { Entries = entries };
             //pointChart.Chart = new PointChart() { Entries = entries };
             //lineChart.Chart = new LineChart() { Entries = entries };
