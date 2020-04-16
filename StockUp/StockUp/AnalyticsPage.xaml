@@ -7,20 +7,120 @@
     Title="Analytics">
     <ScrollView>
         <StackLayout>
+            <Frame Margin="16,16,16,8" Style="{StaticResource analytics-frame}">
+                <StackLayout>
+                    <Label
+                        HorizontalOptions="Center"
+                        Style="{StaticResource title}"
+                        Text="Overview" />
+                    <Picker x:Name="TimePicker" HorizontalOptions="Center">
+                        <Picker.Items>
+                            <x:String>Ticket Data Today</x:String>
+                            <x:String>Ticket Data This Week</x:String>
+                            <x:String>Ticket Data This Month</x:String>
+                        </Picker.Items>
+                        <Picker.SelectedIndex>2</Picker.SelectedIndex>
+                    </Picker>
+
+                    <microcharts:ChartView
+                        x:Name="radialGaugeChart"
+                        Margin="8,8,8,8"
+                        HeightRequest="200" />
+                </StackLayout>
+            </Frame>
             <StackLayout>
-                <!--<microcharts:ChartView x:Name="barChart" HeightRequest="150" />
-            <microcharts:ChartView x:Name="pointChart" HeightRequest="150" />
-            <microcharts:ChartView x:Name="lineChart" HeightRequest="150" />-->
-                <microcharts:ChartView x:Name="donutChart" HeightRequest="150" />
-                <!--<microcharts:ChartView x:Name="radialGaugeChart" HeightRequest="150" />
-            <microcharts:ChartView x:Name="radarChart" HeightRequest="150" />-->
-            </StackLayout>
-            <StackLayout>
-                <Label Text="Overview" />
-                <StackLayout HeightRequest="300" Orientation="Horizontal">
-                    <StackLayout Orientation="Vertical">
-                        <Label Text="Top Five Popular Games" />
-                        <ListView x:Name="BestListView" RowHeight="50">
+                <Frame Margin="16,8,16,8" Style="{StaticResource analytics-frame}">
+                    <StackLayout Padding="24,8,24,8" HeightRequest="325">
+                        <Label
+                            Margin="0,0,0,8"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            HorizontalOptions="Center"
+                            Text="Best and Worst Games" />
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="Best Five" />
+                                <ListView
+                                    x:Name="BestListView"
+                                    RowHeight="50"
+                                    SelectionMode="None">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
+                                                            <Label FontSize="12" Text="{Binding Name}" />
+                                                            <Label FontSize="10" Text="{Binding SumFinalTotal}" />
+                                                        </StackLayout>
+
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackLayout>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="Worst Five" />
+                                <ListView
+                                    x:Name="WorstListView"
+                                    RowHeight="50"
+                                    SelectionMode="None">
+                                    <ListView.ItemTemplate>
+                                        <DataTemplate>
+                                            <ViewCell>
+                                                <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
+                                                            <Label FontSize="12" Text="{Binding Name}" />
+                                                            <Label FontSize="10" Text="{Binding SumFinalTotal}" />
+                                                        </StackLayout>
+
+                                                    </StackLayout>
+                                                </StackLayout>
+                                            </ViewCell>
+                                        </DataTemplate>
+                                    </ListView.ItemTemplate>
+                                </ListView>
+                            </StackLayout>
+                        </StackLayout>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Margin="16,8,16,8" Style="{StaticResource analytics-frame}">
+                    <StackLayout Padding="24,8,24,16" Orientation="Vertical">
+                        <Label
+                            Margin="0,0,0,8"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            HorizontalOptions="Center"
+                            Text="Revenue" />
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Average tickets sold per game: " />
+                            <Label x:Name="averageTickets" FontAttributes="Bold" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Total revenue from tickets sold: " />
+                            <Label x:Name="totalRevenue" FontAttributes="Bold" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame Margin="16,8,16,32" Style="{StaticResource analytics-frame}">
+                    <StackLayout Padding="24,8,24,16" HeightRequest="325">
+                        <Label
+                            Margin="0,0,0,8"
+                            FontAttributes="Bold"
+                            FontSize="18"
+                            HorizontalOptions="Center"
+                            Text="All Games and Total Sold" />
+                        <ListView
+                            x:Name="GamesListView"
+                            HeightRequest="300"
+                            RowHeight="50"
+                            SelectionMode="None">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <ViewCell>
@@ -30,7 +130,6 @@
                                                     <Label FontSize="12" Text="{Binding Name}" />
                                                     <Label FontSize="10" Text="{Binding SumFinalTotal}" />
                                                 </StackLayout>
-
                                             </StackLayout>
                                         </StackLayout>
                                     </ViewCell>
@@ -38,36 +137,7 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </StackLayout>
-                    <StackLayout Orientation="Vertical">
-                        <Label Text="Top Five Unpopular Games" />
-                        <ListView x:Name="WorstListView" RowHeight="50">
-                            <ListView.ItemTemplate>
-                                <DataTemplate>
-                                    <ViewCell>
-                                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
-                                            <StackLayout Orientation="Horizontal">
-                                                <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
-                                                    <Label FontSize="12" Text="{Binding Name}" />
-                                                    <Label FontSize="10" Text="{Binding SumFinalTotal}" />
-                                                </StackLayout>
-
-                                            </StackLayout>
-                                        </StackLayout>
-                                    </ViewCell>
-                                </DataTemplate>
-                            </ListView.ItemTemplate>
-                        </ListView>
-                    </StackLayout>
-                </StackLayout>
-
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Average tickets sold per game" />
-                    <Label x:Name="averageTickets" />
-                </StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <Label Text="Total revenue from tickets sold" />
-                    <Label x:Name="totalRevenue" />
-                </StackLayout>
+                </Frame>
             </StackLayout>
         </StackLayout>
     </ScrollView>

@@ -54,6 +54,20 @@ namespace StockUp
         {
             base.OnAppearing();
             _restService = new RestService();
+
+            switch (TimePicker.SelectedIndex)
+            {
+                case 0:
+                    await DisplayAlert("Caught", "0", "OK");
+                    break;
+                case 1:
+                    await DisplayAlert("Caught", "1", "OK");
+                    break;
+                case 2:
+                    await DisplayAlert("Caught", "2", "OK");
+                    break;
+            }
+
             HttpResponseMessage response = await _restService.GetMonthlyCounts();
 			string content = await response.Content.ReadAsStringAsync();
             content = Constants.TakeOutHeaderJSON(content);
@@ -86,7 +100,7 @@ namespace StockUp
                 }
             }
 
-            for (int i = 0; i<15; i++)
+            for (int i = 0; i<5; i++)
             {
                 int value = gameCounts[i].SumFinalTotal;
                 entries.Add(new Microcharts.Entry(value)
@@ -111,14 +125,15 @@ namespace StockUp
             var avg = (gamesSum / gameCounts.Length);
             averageTickets.Text = avg.ToString();
             totalRevenue.Text = "$"+revenueSum.ToString();
-            donutChart.Chart = new DonutChart() { Entries = entries };
+            //donutChart.Chart = new DonutChart() {LabelTextSize = 30f, BackgroundColor = SKColor.Parse("#00FFFFFF"),  Entries = entries };
 
             BestListView.ItemsSource = bestGames;
             WorstListView.ItemsSource = worstGames;
+            GamesListView.ItemsSource = gameCounts;
             //barChart.Chart = new BarChart() { Entries = entries };
             //pointChart.Chart = new PointChart() { Entries = entries };
             //lineChart.Chart = new LineChart() { Entries = entries };
-            //radialGaugeChart.Chart = new RadialGaugeChart() { Entries = entries };
+            radialGaugeChart.Chart = new RadialGaugeChart() {LabelTextSize = 30f, BackgroundColor = SKColor.Parse("#00FFFFFF"),  Entries = entries };
             //radarChart.Chart = new RadarChart() { Entries = entries };
         }
     }

@@ -41,11 +41,9 @@ namespace StockUp
 
                     if (authResponseCode && tblResponseCode)
                     {
-                        await DisplayAlert("Success!", "Added user", "OK");
+                        await DisplayAlert("Success!", "Please sign in with your new account", "OK");
                         var authJson = await response[0].Content.ReadAsStringAsync();
-                        await DisplayAlert("Auth", authJson.ToString(), "OK");
                         var tblJson = await response[1].Content.ReadAsStringAsync();
-                        await DisplayAlert("Tbl", tblJson.ToString(), "OK");
                         await Navigation.PopModalAsync();
                     }
                     else
