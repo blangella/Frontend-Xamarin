@@ -2,12 +2,12 @@
   <MonoDevelop.Ide.ItemProperties.StockUp.Android PreferredExecutionTarget="Android.pixel_3_xl_pie_9_0_-_api_28" />
   <MonoDevelop.Ide.Workbench ActiveDocument="StockUp/ScanSummaryPage.xaml">
     <Files>
-      <File FileName="StockUp/RestService.cs" Line="104" Column="70" IsPinned="True" />
-      <File FileName="StockUp/Model/Constants.cs" Line="19" Column="10" IsPinned="True" />
-      <File FileName="StockUp/AnalyticsPage.xaml.cs" Line="65" Column="13" />
-      <File FileName="StockUp/ScanSummaryPage.xaml.cs" Line="22" Column="13" />
+      <File FileName="StockUp/RestService.cs" Line="104" Column="4" IsPinned="True" />
+      <File FileName="StockUp/Model/Constants.cs" IsPinned="True" />
+      <File FileName="StockUp/AnalyticsPage.xaml.cs" />
+      <File FileName="StockUp/ScanSummaryPage.xaml.cs" />
       <File FileName="StockUp/ScanSummaryPage.xaml" Line="6" Column="17" />
-      <File FileName="StockUp/AnalyticsPage.xaml" Line="1" Column="1" />
+      <File FileName="StockUp/AnalyticsPage.xaml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
