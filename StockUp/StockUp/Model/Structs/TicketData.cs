@@ -45,6 +45,7 @@ public class TicketData
 		public String Id { get; set; }
 		public String IconSource = "Status_Green.png";
 		public String Status { get; set; }
+        public bool isScanned { get; set; }
 
 	}
 

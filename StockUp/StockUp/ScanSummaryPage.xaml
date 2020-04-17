@@ -6,6 +6,11 @@
     Title="Summary Page">
     <ContentPage.ToolbarItems>
         <ToolbarItem
+            x:Name="StartButton"
+            Clicked="Start_Clicked"
+            IconImageSource=""
+            Text="Start" />
+        <ToolbarItem
             Clicked="Scan_Clicked"
             IconImageSource=""
             Text="Scan" />
@@ -13,6 +18,7 @@
             Clicked="Confirm_Clicked"
             IconImageSource=""
             Text="Confirm" />
+
     </ContentPage.ToolbarItems>
     <ListView x:Name="PacketListView" RowHeight="75">
         <ListView.ItemTemplate>
@@ -21,19 +27,26 @@
                     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
                         <StackLayout Orientation="Horizontal">
                             <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
-
                                 <Label FontSize="18" Text="{Binding Id}" />
                                 <Label FontSize="12" Text="{Binding Name}" />
-                                <Label FontSize="12" Text="{Binding Price}" />
                             </StackLayout>
-                            <Image Margin="0,0,16,0" WidthRequest="20">
+                            <StackLayout Margin="0,0,16,0" HorizontalOptions="FillAndExpand">
+                                <Label
+                                    FontSize="18"
+                                    HorizontalTextAlignment="End"
+                                    Text="{Binding Status}" />
+                            </StackLayout>
+                            <!--<Image
+                                Margin="0,0,16,0"
+                                BackgroundColor="Aqua"
+                                WidthRequest="20">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="Ticket_Tapped" />
                                 </Image.GestureRecognizers>
                                 <Image.Source>
                                     <FileImageSource File="{Binding IconSource}" />
                                 </Image.Source>
-                            </Image>
+                            </Image>-->
 
                         </StackLayout>
                     </StackLayout>

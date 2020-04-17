@@ -49,18 +49,35 @@ public partial class ScanSummaryPage : ContentPage
 			switch (state)
 			{
 				case Constants.Start:
-					HttpResponseMessage response = await _restService.GetPreviousTicketsData();
-					string content = await response.Content.ReadAsStringAsync();
-					content = Constants.TakeOutHeaderJSON(content);
-					TicketData[]ticketsData = JsonConvert.DeserializeObject<TicketData[]>(content);
-					PacketListView.ItemsSource = ticketsData;
+                    StartButton.IsEnabled = true;
+                    if (Constants.startTickets?.Length > 0)
+                    {
+                        for (int i = 0; i<Constants.startTickets.Length; i++)
+                        {
+			                Constants.startTickets[i].Id = Constants.CreateTicketId(Constants.startTickets[i].Game, Constants.startTickets[i].Pack, Constants.startTickets[i].Nbr);
+			                Constants.startTickets[i].Name = Constants.gamesAndNames[Constants.startTickets[i].Game];
+                            Debug.Write("Checking bool ticket scan: "+Constants.startTickets[i].isScanned + "\n\tFrom: "+Constants.startTickets[i].Id);
+                            if (Constants.startTickets[i].isScanned)
+                            {
+                                Debug.Write("Checking bool ticket scan TRUE: "+Constants.startTickets[i].isScanned + "\n\tFrom: "+Constants.startTickets[i].Id);
+				                Constants.startTickets[i].Status = "Scanned";
+                            }
+                            else if (!Constants.startTickets[i].isScanned)
+                            {
+                                Debug.Write("Checking bool ticket scan FALSE: "+Constants.startTickets[i].isScanned + "\n\tFrom: "+Constants.startTickets[i].Id);
+				                Constants.startTickets[i].Status = "Not Scanned";
+                            }
+                        }
+                    }
 					break;
 				case Constants.End:
+				    StartButton.IsEnabled = false;
 					PacketListView.ItemsSource = tickets;
 					break;
 				case Constants.Inventory:
-					ticketsData = await _restService.GetTicketsData(Constants.StockUpEndpoint, Constants.APIKey);
-					PacketListView.ItemsSource = ticketsData;
+				    StartButton.IsEnabled = false;
+					Constants.startTickets = await _restService.GetTicketsData(Constants.StockUpEndpoint, Constants.APIKey);
+					PacketListView.ItemsSource = Constants.startTickets;
 					break;
 			}
 		}
@@ -72,11 +89,13 @@ public partial class ScanSummaryPage : ContentPage
 				switch (state)
 					{
 						case Constants.Start:
+							CustomScannerPage.state = Constants.Start;
 							break;
 						case Constants.End:
 							CustomScannerPage.state = Constants.End;
 							break;
 						case Constants.Inventory:
+							CustomScannerPage.state = Constants.Inventory;
 							break;
 					}
 				await Navigation.PushModalAsync(new CustomScannerPage());
@@ -88,6 +107,7 @@ public partial class ScanSummaryPage : ContentPage
 			switch (state)
 				{
 					case Constants.Start:
+                        CustomScannerPage.state = Constants.Start;
 						break;
 					case Constants.End:
 						CustomScannerPage.state = Constants.End;
@@ -96,6 +116,22 @@ public partial class ScanSummaryPage : ContentPage
 						break;
 				}
 			await Navigation.PushModalAsync(new CustomScannerPage());
+		}
+
+		async void Start_Clicked(System.Object sender, System.EventArgs e)
+		{
+		    HttpResponseMessage response = await _restService.GetPreviousTicketsData();
+		    string content = await response.Content.ReadAsStringAsync();
+		    content = Constants.TakeOutHeaderJSON(content);
+		    Constants.startTickets = JsonConvert.DeserializeObject<TicketData[]>(content);
+            for (int i = 0; i<Constants.startTickets.Length; i++)
+            {
+			    Constants.startTickets[i].Id = Constants.CreateTicketId(Constants.startTickets[i].Game, Constants.startTickets[i].Pack, Constants.startTickets[i].Nbr);
+			    Constants.startTickets[i].Name = Constants.gamesAndNames[Constants.startTickets[i].Game];
+				Constants.startTickets[i].isScanned = false;
+				Constants.startTickets[i].Status = "Not Scanned";
+            }
+		    PacketListView.ItemsSource = Constants.startTickets;
 		}
 
 		async void Confirm_Clicked(System.Object sender, System.EventArgs e)
@@ -115,6 +151,22 @@ public partial class ScanSummaryPage : ContentPage
 							break;
 						}
 					}
+					break;
+				case Constants.Start:
+                    for (int i = 0; i < Constants.startTickets.Length; i++)
+                    {
+						if (Constants.startTickets[i].isScanned == false)
+						{
+							var action = await DisplayActionSheet("Be Careful!\n" + Constants.startTickets[i].Name + "\n" + Constants.startTickets[i].Id  + "\nwas not scanned.\nCommit changes anyways?", "Confirm", "Cancel");
+							switch (action)
+							{
+								case "Confirm":
+									break;
+								case "Cancel":
+									break;
+							}
+						}
+                    }
 					break;
 			}
 		}

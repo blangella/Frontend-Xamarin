@@ -13,7 +13,7 @@ namespace StockUp
 		public HomePage()
 		{
 			InitializeComponent();
-			//NavigationPage.SetHasBackButton(this, false);
+            //NavigationPage.SetHasBackButton(this, false);
 		}
 
 		async void Start_Clicked(System.Object sender, System.EventArgs e)
@@ -53,5 +53,15 @@ namespace StockUp
 				await DisplayAlert("Error", "Could not sign out", "OK");
 			}
 		}
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+			_restService = new RestService();
+            var response = await _restService.GetAllGames();
+			string content = await response.Content.ReadAsStringAsync();
+			content = Constants.TakeOutHeaderJSON(content);
+			Constants.InitializeAllGames(content);
+        }
 	}
 }

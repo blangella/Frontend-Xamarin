@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using Newtonsoft.Json;
@@ -61,22 +62,28 @@ namespace StockUp
 								Nbr = Constants.GetNbrNum(result.Text),
 								Emp_id = Constants.UserData.Emp_id
 							};
-							//for (int i = 0; i < allGames.Length; i++) 
-							//{
-							//    if (allGames[i].Game == ticket.Game)
-							//    {
-							//        await DisplayAlert("FOUND", "FOUND", "OK");
-							//        ticket.Name = allGames[i].Name;
-							//        ticket.Price = allGames[i].Price;
-							//        break;
-							//    }
-							//}
-							if (state.Equals(Constants.End))
-							{
-								ticket.Id = ticket.Game.ToString() + ticket.Pack.ToString() + ticket.Nbr.ToString();
-								ScanSummaryPage.tickets.Add(ticket);
-								await DisplayAlert("Added", ticket.ToString(), "OK");
-							}
+							ticket.Id = Constants.CreateTicketId(ticket.Game, ticket.Pack, ticket.Nbr);
+                            switch (state)
+                            {
+								case Constants.Start:
+									for (int i = 0; i<Constants.startTickets.Length; i++)
+                                    {
+                                        if (Constants.startTickets[i].Id.Equals(ticket.Id))
+                                        {
+											Constants.startTickets[i].isScanned = true;
+                                        }
+									}
+									break;
+								case Constants.Activate:
+									break;
+								case Constants.End:
+								    ticket.Id = ticket.Game.ToString() + ticket.Pack.ToString() + ticket.Nbr.ToString();
+								    ScanSummaryPage.tickets.Add(ticket);
+									break;
+								case Constants.Inventory:
+									break;
+                            }
+                            await DisplayAlert("Added ticket", "", "OK");
 							Zxing.IsAnalyzing = true;
 							break;
 						case "Done":
@@ -87,13 +94,31 @@ namespace StockUp
 								Nbr = Constants.GetNbrNum(result.Text),
 								Emp_id = Constants.UserData.Emp_id
 							};
-							if (state.Equals(Constants.End))
-							{
-								ticket.Id = ticket.Game.ToString() + ticket.Pack.ToString() + ticket.Nbr.ToString();
+							ticket.Id = Constants.CreateTicketId(ticket.Game, ticket.Pack, ticket.Nbr);
 
-								ScanSummaryPage.tickets.Add(ticket);
-								await DisplayAlert("Added", ticket.ToString(), "OK");
-							}
+                            switch (state)
+                            {
+								case Constants.Start:
+									for (int i = 0; i<Constants.startTickets.Length; i++)
+                                    {
+									    Debug.Write("\nComparing Scan: " + Constants.startTickets[i].Id + "\n\tWith ticket: " + ticket.Id);
+                                        if (Constants.startTickets[i].Id.Equals(ticket.Id))
+                                        {
+											Constants.startTickets[i].isScanned = true;
+											Debug.Write("Checking bool: "+Constants.startTickets[i].isScanned);
+											break;
+                                        }
+									}
+									break;
+								case Constants.Activate:
+									break;
+								case Constants.End:
+								    ScanSummaryPage.tickets.Add(ticket);
+								    await DisplayAlert("Added", ticket.ToString(), "OK");
+									break;
+								case Constants.Inventory:
+									break;
+                            }
 							await Navigation.PopModalAsync();
 							break;
 

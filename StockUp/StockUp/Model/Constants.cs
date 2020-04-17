@@ -17,6 +17,8 @@ namespace StockUp.Model
 		public const string Inventory = "inventory";
 		public static Dictionary<int, string> gamesAndNames = new Dictionary<int, string>();
 		public static Dictionary<int, string> gamesAndPrices = new Dictionary<int, string>();
+		public static TicketData[] startTickets;
+
 
 		public static String GetRandomColor()
 		{
@@ -39,6 +41,11 @@ namespace StockUp.Model
                 }
 			}
 		}
+
+        public static String CreateTicketId(int Game, int Pack, int Nbr)
+        {
+            return Game.ToString() + " - " + Pack.ToString() + " - " + Nbr.ToString();
+        }
 
 		public static String TakeOutHeaderJSON(String JSON)
 		{
