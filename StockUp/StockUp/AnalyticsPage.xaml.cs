@@ -25,27 +25,6 @@ namespace StockUp
         AnalyticsData[] worstGames = new AnalyticsData[5];
         bool initialized = false;
 
-        //{
-        //    new Microcharts.Entry(200)
-        //    {
-        //        Label = "January",
-        //        ValueLabel = "200",
-        //        Color = SKColor.Parse(AnalyticsPage.GetRandomColor())
-        //    },
-        //    new Microcharts.Entry(400)
-        //    {
-        //        Label = "February",
-        //        ValueLabel = "400",
-        //        Color = SKColor.Parse(AnalyticsPage.GetRandomColor())
-        //    },
-        //    new Microcharts.Entry(-100)
-        //    {
-        //        Label = "March",
-        //        ValueLabel = "100",
-        //        Color = SKColor.Parse(AnalyticsPage.GetRandomColor())
-        //    },
-        //};
-
         public AnalyticsPage()
         {
             InitializeComponent();

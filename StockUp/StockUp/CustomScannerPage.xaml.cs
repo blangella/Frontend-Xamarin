@@ -66,7 +66,7 @@ namespace StockUp
                             switch (Constants.State)
                             {
 								case Constants.Start:
-									for (int i = 0; i<Constants.startTickets.Length; i++)
+									for (int i = 0; i<Constants.startTickets.Count; i++)
                                     {
                                         if (Constants.startTickets[i].Id.Equals(ticket.Id))
                                         {
@@ -99,7 +99,7 @@ namespace StockUp
                             switch (Constants.State)
                             {
 								case Constants.Start:
-									for (int i = 0; i<Constants.startTickets.Length; i++)
+									for (int i = 0; i<Constants.startTickets.Count; i++)
                                     {
 									    Debug.Write("\nComparing Scan: " + Constants.startTickets[i].Id + "\n\tWith ticket: " + ticket.Id);
                                         if (Constants.startTickets[i].Id.Equals(ticket.Id))

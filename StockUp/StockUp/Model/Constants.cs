@@ -18,7 +18,7 @@ namespace StockUp.Model
 		public const string Inventory = "inventory";
 		public static Dictionary<int, string> gamesAndNames = new Dictionary<int, string>();
 		public static Dictionary<int, string> gamesAndPrices = new Dictionary<int, string>();
-		public static TicketData[] startTickets;
+		public static List<TicketData> startTickets;
 
 
 		public static String GetRandomColor()

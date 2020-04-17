@@ -50,9 +50,9 @@ namespace StockUp
 		}
 
 		// GET all tickets from database, RETURNS list of ticket objects
-		public async Task<TicketData[]> GetTicketsData(string uri, string id)
+		public async Task<List<TicketData>> GetTicketsData(string uri, string id)
 		{
-			TicketData[] ticketsData = null;
+			List<TicketData> ticketsData = null;
 			id.Replace("@", "%40");
 			var getUrl = uri + "tblTickets?" + "access_token=" + id;
 			try
@@ -61,7 +61,7 @@ namespace StockUp
 				if (response.IsSuccessStatusCode)
 				{
 					string content = await response.Content.ReadAsStringAsync();
-					ticketsData = JsonConvert.DeserializeObject<TicketData[]>(content);
+					ticketsData = JsonConvert.DeserializeObject<List<TicketData>>(content);
 				}
 			}
 			catch (Exception ex)

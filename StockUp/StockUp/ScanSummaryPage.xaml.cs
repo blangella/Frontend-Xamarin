@@ -51,9 +51,9 @@ public partial class ScanSummaryPage : ContentPage
 			{
 				case Constants.Start:
                     StartButton.IsEnabled = true;
-                    if (Constants.startTickets?.Length > 0)
+                    if (Constants.startTickets?.Count > 0)
                     {
-                        for (int i = 0; i<Constants.startTickets.Length; i++)
+                        for (int i = 0; i<Constants.startTickets.Count; i++)
                         {
 			                Constants.startTickets[i].Id = Constants.CreateTicketId(Constants.startTickets[i].Game, Constants.startTickets[i].Pack, Constants.startTickets[i].Nbr);
 			                Constants.startTickets[i].Name = Constants.gamesAndNames[Constants.startTickets[i].Game];
@@ -103,8 +103,8 @@ public partial class ScanSummaryPage : ContentPage
 		    HttpResponseMessage response = await _restService.GetPreviousTicketsData();
 		    string content = await response.Content.ReadAsStringAsync();
 		    content = Constants.TakeOutHeaderJSON(content);
-		    Constants.startTickets = JsonConvert.DeserializeObject<TicketData[]>(content);
-            for (int i = 0; i<Constants.startTickets.Length; i++)
+		    Constants.startTickets = JsonConvert.DeserializeObject<List<TicketData>>(content);
+            for (int i = 0; i<Constants.startTickets.Count; i++)
             {
 			    Constants.startTickets[i].Id = Constants.CreateTicketId(Constants.startTickets[i].Game, Constants.startTickets[i].Pack, Constants.startTickets[i].Nbr);
 			    Constants.startTickets[i].Name = Constants.gamesAndNames[Constants.startTickets[i].Game];
@@ -133,7 +133,7 @@ public partial class ScanSummaryPage : ContentPage
 					}
 					break;
 				case Constants.Start:
-                    for (int i = 0; i < Constants.startTickets.Length; i++)
+                    for (int i = 0; i < Constants.startTickets.Count; i++)
                     {
 						if (Constants.startTickets[i].isScanned == false)
 						{
@@ -143,12 +143,12 @@ public partial class ScanSummaryPage : ContentPage
 								case "Continue anyways":
 									break;
 								case "Cancel":
-									i = Constants.startTickets.Length;
+									i = Constants.startTickets.Count;
 									break;
 							}
 						}
                     }
-                    for (int i = 0; i < Constants.startTickets.Length; i++)
+                    for (int i = 0; i < Constants.startTickets.Count; i++)
                     {
 						if (Constants.startTickets[i].isScanned)
 						{
