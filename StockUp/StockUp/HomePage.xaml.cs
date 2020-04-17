@@ -58,11 +58,30 @@ namespace StockUp
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+
 			_restService = new RestService();
             var response = await _restService.GetAllGames();
 			string content = await response.Content.ReadAsStringAsync();
 			content = Constants.TakeOutHeaderJSON(content);
 			Constants.InitializeAllGames(content);
+
+    //        switch (Constants.State)
+    //        {
+				//case Constants.Start:
+				//	StartButton.IsEnabled = true;
+				//	EndButton.IsEnabled = false;
+				//	break;
+				//case Constants.Activate:
+				//	break;
+				//case Constants.End:
+				//	StartButton.IsEnabled = false;
+				//	EndButton.IsEnabled = true;
+				//	break;
+				//default:
+				//	StartButton.IsEnabled = true;
+				//	EndButton.IsEnabled = false;
+				//	break;
+    //        }
         }
 	}
 }
