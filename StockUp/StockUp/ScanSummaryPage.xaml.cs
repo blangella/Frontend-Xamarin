@@ -163,6 +163,7 @@ public partial class ScanSummaryPage : ContentPage
 								case "Confirm":
 									break;
 								case "Cancel":
+									i = Constants.startTickets.Length;
 									break;
 							}
 						}
