@@ -31,12 +31,12 @@ public partial class ScanSummaryPage : ContentPage
 		protected override async void OnAppearing()
 		{
 			base.OnAppearing();
+
 			_restService = new RestService();
 			HttpResponseMessage responseGames = await _restService.GetAllGames();
 			string contentGames = await responseGames.Content.ReadAsStringAsync();
 			contentGames = Constants.TakeOutHeaderJSON(contentGames);
 			allGames = JsonConvert.DeserializeObject<GameNamePriceData[]>(contentGames);
-            
 			for (int j = 0; j < allGames.Length; j++)
 			{
 				GameNamePriceData curr = allGames[j];
@@ -46,6 +46,7 @@ public partial class ScanSummaryPage : ContentPage
 					gamesAndPrices.Add(curr.Game, curr.Price);
 				}
 			}
+
 			switch (state)
 			{
 				case Constants.Start:
@@ -68,6 +69,8 @@ public partial class ScanSummaryPage : ContentPage
 				                Constants.startTickets[i].Status = "Not Scanned";
                             }
                         }
+						PacketListView.ItemsSource = null;
+						PacketListView.ItemsSource = Constants.startTickets;
                     }
 					break;
 				case Constants.End:
@@ -157,10 +160,10 @@ public partial class ScanSummaryPage : ContentPage
                     {
 						if (Constants.startTickets[i].isScanned == false)
 						{
-							var action = await DisplayActionSheet("Be Careful!\n" + Constants.startTickets[i].Name + "\n" + Constants.startTickets[i].Id  + "\nwas not scanned.\nCommit changes anyways?", "Confirm", "Cancel");
+							var action = await DisplayActionSheet("Be Careful!\nA ticket was not scanned.", "Continue anyways", "Cancel");
 							switch (action)
 							{
-								case "Confirm":
+								case "Continue anyways":
 									break;
 								case "Cancel":
 									i = Constants.startTickets.Length;
@@ -168,6 +171,19 @@ public partial class ScanSummaryPage : ContentPage
 							}
 						}
                     }
+                    for (int i = 0; i < Constants.startTickets.Length; i++)
+                    {
+						if (Constants.startTickets[i].isScanned)
+						{
+					        HttpResponseMessage response = await _restService.PostStartDayTicket(Constants.startTickets[i].Game.ToString(), Constants.startTickets[i].Pack.ToString(), Constants.startTickets[i].Nbr.ToString(), Constants.UserData.Emp_id);
+					        string content = await response.Content.ReadAsStringAsync();
+                            if (!response.IsSuccessStatusCode)
+                            {
+                                await DisplayAlert("Could not log ticket.", Constants.startTickets[i].Name + "\n" + Constants.startTickets[i].Name, "OK");
+                            }
+						}
+                    }
+                    await DisplayAlert("Logged all scanned tickets", "", "OK");
 					break;
 			}
 		}
