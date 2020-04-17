@@ -19,19 +19,20 @@ namespace StockUp
 		async void Start_Clicked(System.Object sender, System.EventArgs e)
 		{
 			ScanSummaryPage page = new ScanSummaryPage();
-			ScanSummaryPage.state = Constants.Start;
+			Constants.State = Constants.Start;
 			await Navigation.PushAsync(page);
 		}
 
 		async void Activate_Clicked(System.Object sender, System.EventArgs e)
 		{
+			Constants.State = Constants.Activate;
 			await Navigation.PushAsync(new ScanSummaryPage());
 		}
 
 		async void End_Clicked(System.Object sender, System.EventArgs e)
 		{
+			Constants.State = Constants.End;
 			ScanSummaryPage page = new ScanSummaryPage();
-			ScanSummaryPage.state = Constants.End;
 			await Navigation.PushAsync(page);
 		}
 

@@ -63,7 +63,7 @@ namespace StockUp
 								Emp_id = Constants.UserData.Emp_id
 							};
 							ticket.Id = Constants.CreateTicketId(ticket.Game, ticket.Pack, ticket.Nbr);
-                            switch (state)
+                            switch (Constants.State)
                             {
 								case Constants.Start:
 									for (int i = 0; i<Constants.startTickets.Length; i++)
@@ -96,7 +96,7 @@ namespace StockUp
 							};
 							ticket.Id = Constants.CreateTicketId(ticket.Game, ticket.Pack, ticket.Nbr);
 
-                            switch (state)
+                            switch (Constants.State)
                             {
 								case Constants.Start:
 									for (int i = 0; i<Constants.startTickets.Length; i++)

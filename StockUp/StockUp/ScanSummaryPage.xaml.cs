@@ -47,7 +47,7 @@ public partial class ScanSummaryPage : ContentPage
 				}
 			}
 
-			switch (state)
+			switch (Constants.State)
 			{
 				case Constants.Start:
                     StartButton.IsEnabled = true;
@@ -89,35 +89,12 @@ public partial class ScanSummaryPage : ContentPage
 		{
 			if (((sender as Image).BindingContext is TicketData _selectedTicket))
 			{
-				switch (state)
-					{
-						case Constants.Start:
-							CustomScannerPage.state = Constants.Start;
-							break;
-						case Constants.End:
-							CustomScannerPage.state = Constants.End;
-							break;
-						case Constants.Inventory:
-							CustomScannerPage.state = Constants.Inventory;
-							break;
-					}
 				await Navigation.PushModalAsync(new CustomScannerPage());
 			}
 		}
 
 		async void Scan_Clicked(System.Object sender, System.EventArgs e)
 		{
-			switch (state)
-				{
-					case Constants.Start:
-                        CustomScannerPage.state = Constants.Start;
-						break;
-					case Constants.End:
-						CustomScannerPage.state = Constants.End;
-						break;
-					case Constants.Inventory:
-						break;
-				}
 			await Navigation.PushModalAsync(new CustomScannerPage());
 		}
 
@@ -141,7 +118,7 @@ public partial class ScanSummaryPage : ContentPage
 		{
 			await DisplayAlert("Confirm All Scans", "Are you sure you want to confirm?", "OK");
 
-			switch (state)
+			switch (Constants.State)
 			{
 				case Constants.End:
 					for(int i = 0; i < tickets.Count; i++)
