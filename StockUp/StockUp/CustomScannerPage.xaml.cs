@@ -17,9 +17,7 @@ namespace StockUp
 
 		ZXingScannerView Zxing;
 		ZXingDefaultOverlay Overaly;
-		List<String> ScannedTickets = new List<String>();
 		RestService _restService;
-		GameNamePriceData[] allGames;
 		public static string state; 
 
 		public CustomScannerPage () : base ()
@@ -39,30 +37,26 @@ namespace StockUp
 				// Stop analysis until we navigate away so we don't keep reading barcodes
 				Zxing.IsAnalyzing = false;
 
-				// Show an alert
-				//await DisplayAlert ("Scanned Barcode", result.Text, "OK");
-
-				// Navigate away
-				//await Navigation.PopAsync ();
-
 				// Show pop up
 				String[] actionButtons = { "Confirm", "Done" };
 				var action = await DisplayActionSheet("Scanned Barcode\n" + result.Text, "Redo", "Cancel", actionButtons);
 				TicketData ticket;
+				ticket = new TicketData
+				{
+					Game = Constants.GetGameNum(result.Text),
+					Pack = Constants.GetPackNum(result.Text),
+					Nbr = Constants.GetNbrNum(result.Text),
+					Emp_id = Constants.UserData.Emp_id
+				};
+				ticket.Id = Constants.CreateTicketId(ticket.Game, ticket.Pack, ticket.Nbr);
+				ticket.Name = Constants.gamesAndNames[ticket.Game];
+				ticket.Price = Constants.gamesAndPrices[ticket.Game];
 				switch (action)
 					{
 						case "Redo":
 							Zxing.IsAnalyzing = true;
 							break;
 						case "Confirm":
-							ticket = new TicketData
-							{
-								Game = Constants.GetGameNum(result.Text),
-								Pack = Constants.GetPackNum(result.Text),
-								Nbr = Constants.GetNbrNum(result.Text),
-								Emp_id = Constants.UserData.Emp_id
-							};
-							ticket.Id = Constants.CreateTicketId(ticket.Game, ticket.Pack, ticket.Nbr);
                             switch (Constants.State)
                             {
 								case Constants.Start:
@@ -77,25 +71,17 @@ namespace StockUp
 								case Constants.Activate:
 									break;
 								case Constants.End:
-								    ticket.Id = ticket.Game.ToString() + ticket.Pack.ToString() + ticket.Nbr.ToString();
-								    ScanSummaryPage.tickets.Add(ticket);
+									ticket.isScanned = true;
+									ticket.Status = "Scanned";
+								    Constants.endTickets.Add(ticket);
 									break;
 								case Constants.Inventory:
 									break;
                             }
-                            await DisplayAlert("Added ticket", "", "OK");
+                            await DisplayAlert("Added ticket", ticket.Name, "OK");
 							Zxing.IsAnalyzing = true;
 							break;
 						case "Done":
-							ticket = new TicketData
-							{
-								Game = Constants.GetGameNum(result.Text),
-								Pack = Constants.GetPackNum(result.Text),
-								Nbr = Constants.GetNbrNum(result.Text),
-								Emp_id = Constants.UserData.Emp_id
-							};
-							ticket.Id = Constants.CreateTicketId(ticket.Game, ticket.Pack, ticket.Nbr);
-
                             switch (Constants.State)
                             {
 								case Constants.Start:
@@ -113,8 +99,10 @@ namespace StockUp
 								case Constants.Activate:
 									break;
 								case Constants.End:
-								    ScanSummaryPage.tickets.Add(ticket);
-								    await DisplayAlert("Added", ticket.ToString(), "OK");
+									ticket.isScanned = true;
+									ticket.Status = "Scanned";
+								    Constants.endTickets.Add(ticket);
+								    await DisplayAlert("Added ticket", ticket.Name, "OK");
 									break;
 								case Constants.Inventory:
 									break;

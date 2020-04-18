@@ -18,7 +18,6 @@ public partial class ScanSummaryPage : ContentPage
 		public static String state;
 		//ZXingScannerPage scanPage;
 		RestService _restService;
-		public static List<TicketData> tickets = new List<TicketData>();
 		GameNamePriceData[] allGames;
 		Dictionary<int, String> gamesAndNames = new Dictionary<int, string>();
 		Dictionary<int, String> gamesAndPrices = new Dictionary<int, string>();
@@ -75,7 +74,7 @@ public partial class ScanSummaryPage : ContentPage
 					break;
 				case Constants.End:
 				    StartButton.IsEnabled = false;
-					PacketListView.ItemsSource = tickets;
+					PacketListView.ItemsSource = Constants.endTickets;
 					break;
 				case Constants.Inventory:
 				    StartButton.IsEnabled = false;
@@ -121,13 +120,13 @@ public partial class ScanSummaryPage : ContentPage
 			switch (Constants.State)
 			{
 				case Constants.End:
-					for(int i = 0; i < tickets.Count; i++)
+					for(int i = 0; i < Constants.endTickets?.Count; i++)
 					{
-						HttpResponseMessage response = await _restService.PostEndDayTicket(tickets[i].Game.ToString(), tickets[i].Pack.ToString(), tickets[i].Nbr.ToString(), Constants.UserData.Emp_id);
+						HttpResponseMessage response = await _restService.PostEndDayTicket(Constants.endTickets[i].Game.ToString(), Constants.endTickets[i].Pack.ToString(), Constants.endTickets[i].Nbr.ToString(), Constants.UserData.Emp_id);
 						string content = await response.Content.ReadAsStringAsync();
 						if (!response.IsSuccessStatusCode)
 						{
-							await DisplayAlert("Error", "Could not confirm ticket: " + tickets[i].Id, "OK");
+							await DisplayAlert("Error", "Could not confirm ticket: " + Constants.endTickets[i].Id, "OK");
 							break;
 						}
 					}
