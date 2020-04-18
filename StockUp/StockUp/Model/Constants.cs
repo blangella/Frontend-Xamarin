@@ -20,6 +20,7 @@ namespace StockUp.Model
 		public static Dictionary<int, string> gamesAndPrices = new Dictionary<int, string>();
 		public static List<TicketData> startTickets = new List<TicketData>();
 		public static List<TicketData> endTickets = new List<TicketData>();
+		public static List<TicketData> inventoryTickets = new List<TicketData>();
 
 		public static String GetRandomColor()
 		{

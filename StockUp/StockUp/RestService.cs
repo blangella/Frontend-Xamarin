@@ -212,6 +212,17 @@ namespace StockUp
 			return response;
 		}
 
+        // GET all games, RETURNS json response
+		public async Task<HttpResponseMessage> GetInventory()
+		{
+			HttpClient httpClient;
+			var URL = Constants.StockUpEndpoint + "tblTickets/inventoryTickets?access_token=" + Constants.APIKey;
+			httpClient = new HttpClient();
+			var response = await httpClient.GetAsync(URL);
+
+			return response;
+		}
+
 		// GET daily counts, RETURNS json response
 		public async Task<HttpResponseMessage> GetDailyCounts()
 		{

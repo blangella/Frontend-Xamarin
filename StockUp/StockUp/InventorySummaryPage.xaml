@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="StockUp.InventorySummaryPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Store Inventory">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="AddButton"
+            Clicked="Add_Clicked"
+            IconImageSource=""
+            Text="Add" />
+
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <SearchBar
+            x:Name="searchBar"
+            Keyboard="Numeric"
+            Placeholder="Type in game number"
+            TextChanged="SearchBar_TextChanged" />
+        <ListView x:Name="PacketListView" RowHeight="75">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Margin="16,0,0,0" HorizontalOptions="FillAndExpand">
+                                    <Label FontSize="18" Text="{Binding Id}" />
+                                    <Label FontSize="12" Text="{Binding Name}" />
+                                </StackLayout>
+                                <StackLayout Margin="0,0,16,0" HorizontalOptions="FillAndExpand">
+                                    <Label
+                                        FontSize="18"
+                                        HorizontalTextAlignment="End"
+                                        Text="{Binding Status}" />
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
