@@ -70,15 +70,21 @@ namespace StockUp.Model
 		public static int GetGameNum(String barcode)
 		{
 			barcode = barcode.Substring(0, 5);
-			int i = 0;
-			while (i < barcode.Length)
+			if (!barcode.Equals("00000") && barcode[0] == '0')
 			{
-				if (barcode[i] == '0')
-				{
-					break;
-				}
-			}
-			barcode = barcode.Substring(i + 1);
+			    int i = 0;
+			    while (i < barcode.Length)
+			    {
+				    if (barcode[i] == '0')
+				    {
+					    break;
+				    }
+			    }
+			    barcode = barcode.Substring(i + 1);
+			} else if(barcode.Equals("00000"))
+            {
+				barcode = "0";
+            }
 			Debug.Write("GAME: " + barcode);
 			return Int16.Parse(barcode);
 		}
@@ -86,15 +92,21 @@ namespace StockUp.Model
 		public static int GetPackNum(String barcode)
 		{
 			barcode = barcode.Substring(5, 6);
-			int i = 0;
-			while (i < barcode.Length)
+			if (!barcode.Equals("000000") && barcode[0] == '0')
 			{
-				if (barcode[i] == '0')
+				int i = 0;
+				while (i < barcode.Length)
 				{
-					break;
+					if (barcode[i] == '0')
+					{
+						break;
+					}
 				}
+				barcode = barcode.Substring(i + 1);
+			} else if (barcode.Equals("000000"))
+            {
+				barcode = "0";
 			}
-			barcode = barcode.Substring(i + 1);
 			Debug.Write("PACK: " + barcode);
 			return Int32.Parse(barcode);
 		}
@@ -102,15 +114,22 @@ namespace StockUp.Model
 		public static int GetNbrNum(String barcode)
 		{
 			barcode = barcode.Substring(11, 3);
-			int i = 0;
-			while (i < barcode.Length)
+			if (!barcode.Equals("000") && barcode[0] == '0')
 			{
-				if (barcode[i] == '0')
-				{
-					break;
-				}
-			}
-			barcode = barcode.Substring(i + 1);
+			    int i = 0;
+			    while (i < barcode.Length)
+			    {
+				    if (barcode[i] == '0')
+				    {
+					    break;
+				    }
+			    }
+			    barcode = barcode.Substring(i + 1);
+			} else if(barcode.Equals("000"))
+            {
+				barcode = "0";
+            }
+
 			Debug.Write("NBR: " + barcode);
 			return Int32.Parse(barcode);
 		}
