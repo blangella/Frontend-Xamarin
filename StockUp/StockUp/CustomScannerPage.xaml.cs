@@ -37,9 +37,6 @@ namespace StockUp
 				// Stop analysis until we navigate away so we don't keep reading barcodes
 				Zxing.IsAnalyzing = false;
 
-				// Show pop up
-				String[] actionButtons = { "Confirm", "Done" };
-				var action = await DisplayActionSheet("Scanned Barcode\n" + result.Text, "Redo", "Cancel", actionButtons);
 				TicketData ticket;
 				ticket = new TicketData
 				{
@@ -51,6 +48,18 @@ namespace StockUp
 				ticket.Id = Constants.CreateTicketId(ticket.Game, ticket.Pack, ticket.Nbr);
 				ticket.Name = Constants.gamesAndNames[ticket.Game];
 				ticket.Price = Constants.gamesAndPrices[ticket.Game];
+
+				String[] actionButtons;
+                // Show pop up
+                if (Constants.State.Equals(Constants.Activate)) {
+			        actionButtons = new string[]{ "Done" };
+
+                }
+                else
+                {
+                    actionButtons = new string[]{ "Confirm", "Done" };
+                }
+				var action = await DisplayActionSheet("Scanned Barcode\n" + result.Text, "Redo", "Cancel", actionButtons);
 				switch (action)
 					{
 						case "Redo":
@@ -97,6 +106,17 @@ namespace StockUp
 									}
 									break;
 								case Constants.Activate:
+									_restService = new RestService();
+						            HttpResponseMessage response = await _restService.PostActivateTicket(ticket.Game.ToString(), ticket.Pack.ToString(), ticket.ToString(), Constants.UserData.Emp_id);
+						            string content = await response.Content.ReadAsStringAsync();
+                                    if (response.IsSuccessStatusCode)
+                                    {
+										await DisplayAlert("Success", "Activated ticket", "OK");
+                                    }
+                                    else
+                                    {
+										await DisplayAlert("Failure", "Could not activate ticket", "OK");
+                                    }
 									break;
 								case Constants.End:
 									ticket.isScanned = true;
@@ -109,7 +129,6 @@ namespace StockUp
                             }
 							await Navigation.PopModalAsync();
 							break;
-
 					}
 				});
 
@@ -142,5 +161,10 @@ namespace StockUp
 
 			base.OnDisappearing();
 		}
-	}
+
+        void Submit_Clicked(System.Object sender, System.EventArgs e)
+        {
+
+        }
+    }
 }

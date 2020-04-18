@@ -187,7 +187,7 @@ namespace StockUp
 		// POST a ticket to activated, RETURNS json response with header object
 		public async Task<HttpResponseMessage> PostActivateTicket(string Game, string Pack, string Nbr, string Emp_id)
 		{
-			var URL = Constants.StockUpEndpoint+"tblTickets/seedNewGame?access_token="+Constants.APIKey;
+			var URL = Constants.StockUpEndpoint+"tblTickets/activateTicket?access_token="+Constants.APIKey;
 			var formContent = new FormUrlEncodedContent(new[]
 				{
 					new KeyValuePair<string, string>("Game", Game),

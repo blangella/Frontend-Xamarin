@@ -8,5 +8,35 @@
             x:Name="ScannerGrid"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="FillAndExpand" />
+        <StackLayout Margin="0,0,0,8">
+            <Label
+                FontAttributes="Bold"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Text="Manual Entry" />
+            <StackLayout Orientation="Horizontal">
+                <Entry
+                    x:Name="GameEntry"
+                    Margin="4,0,4,0"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Game" />
+                <Entry
+                    x:Name="PackEntry"
+                    Margin="4,0,4,0"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Pack" />
+                <Entry
+                    x:Name="NbrEntry"
+                    Margin="4,0,4,0"
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Number" />
+                <Button
+                    Margin="4,0,4,0"
+                    Clicked="Submit_Clicked"
+                    Style="{StaticResource primary-button}"
+                    Text="Submit"
+                    WidthRequest="100" />
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

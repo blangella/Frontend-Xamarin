@@ -26,7 +26,7 @@ namespace StockUp
 		async void Activate_Clicked(System.Object sender, System.EventArgs e)
 		{
 			Constants.State = Constants.Activate;
-			await Navigation.PushAsync(new ScanSummaryPage());
+			await Navigation.PushModalAsync(new CustomScannerPage());
 		}
 
 		async void End_Clicked(System.Object sender, System.EventArgs e)
