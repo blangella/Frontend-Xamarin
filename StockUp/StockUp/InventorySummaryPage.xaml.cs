@@ -15,6 +15,7 @@ namespace StockUp
         {
             InitializeComponent();
             PacketListView.ItemsSource = Constants.inventoryTickets;
+            PacketListView.ItemTapped += Delete_Clicked;
         }
 
         protected async override void OnAppearing()
@@ -40,6 +41,25 @@ namespace StockUp
         {
             Constants.State = Constants.Inventory;
             await Navigation.PushModalAsync(new CustomScannerPage());
+        }
+
+        async void Delete_Clicked(System.Object sender, ItemTappedEventArgs e)
+        {
+            //var tappedUser = e.Item as UserData;
+            //var answer = await DisplayAlert("Delete user " + tappedUser.First, "Would you like to delete this user?\n(You cannot revert this)", "Confirm", "Cancel");
+            //if (answer)
+            //{
+            //    HttpResponseMessage[] responses = await _restService.DeleteUserData(Constants.StockUpEndpoint, tappedUser.Emp_id, tappedUser.Email);
+            //    if (responses[0].IsSuccessStatusCode && responses[1].IsSuccessStatusCode)
+            //    {
+            //        await DisplayAlert("Success","User is now deleted", "OK");
+            //        OnAppearing();
+            //    }
+            //    else
+            //    {
+            //        await DisplayAlert("Failure", "Something went wrong and the account was not deleted", "OK");
+            //    }
+            //}
         }
 
         void SearchBar_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)

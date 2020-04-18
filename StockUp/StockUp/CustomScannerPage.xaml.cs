@@ -107,6 +107,9 @@ namespace StockUp
                 {
                     actionButtons = new string[]{ "Confirm", "Done" };
                 }
+                _restService = new RestService();
+			    HttpResponseMessage response;
+			    String content;
 				var action = await DisplayActionSheet("Scanned Barcode\n" + result, "Redo", "Cancel", actionButtons);
 				switch (action)
 					{
@@ -133,6 +136,16 @@ namespace StockUp
 								    Constants.endTickets.Add(ticket);
 									break;
 								case Constants.Inventory:
+						            response = await _restService.PostSeedTicket(ticket.Game.ToString(), ticket.Pack.ToString(), ticket.ToString(), Constants.UserData.Emp_id);
+						            content = await response.Content.ReadAsStringAsync();
+                                    if (response.IsSuccessStatusCode)
+                                    {
+										await DisplayAlert("Success", "Seeded ticket "+ticket.Id, "OK");
+                                    }
+                                    else
+                                    {
+										await DisplayAlert("Failure", "Could not seed ticket", "OK");
+                                    }
 									break;
                             }
                             await DisplayAlert("Added ticket", ticket.Name, "OK");
@@ -154,9 +167,8 @@ namespace StockUp
 									}
 									break;
 								case Constants.Activate:
-									_restService = new RestService();
-						            HttpResponseMessage response = await _restService.PostActivateTicket(ticket.Game.ToString(), ticket.Pack.ToString(), ticket.ToString(), Constants.UserData.Emp_id);
-						            string content = await response.Content.ReadAsStringAsync();
+						            response = await _restService.PostActivateTicket(ticket.Game.ToString(), ticket.Pack.ToString(), ticket.ToString(), Constants.UserData.Emp_id);
+						            content = await response.Content.ReadAsStringAsync();
                                     if (response.IsSuccessStatusCode)
                                     {
 										await DisplayAlert("Success", "Activated ticket", "OK");
@@ -173,6 +185,16 @@ namespace StockUp
 								    await DisplayAlert("Added ticket", ticket.Name, "OK");
 									break;
 								case Constants.Inventory:
+						            response = await _restService.PostSeedTicket(ticket.Game.ToString(), ticket.Pack.ToString(), ticket.ToString(), Constants.UserData.Emp_id);
+						            content = await response.Content.ReadAsStringAsync();
+                                    if (response.IsSuccessStatusCode)
+                                    {
+										await DisplayAlert("Success", "Seeded ticket "+ticket.Id, "OK");
+                                    }
+                                    else
+                                    {
+										await DisplayAlert("Failure", "Could not seed ticket", "OK");
+                                    }
 									break;
                             }
 							await Navigation.PopModalAsync();
