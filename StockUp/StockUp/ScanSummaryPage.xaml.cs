@@ -19,8 +19,6 @@ public partial class ScanSummaryPage : ContentPage
 		//ZXingScannerPage scanPage;
 		RestService _restService;
 		GameNamePriceData[] allGames;
-		Dictionary<int, String> gamesAndNames = new Dictionary<int, string>();
-		Dictionary<int, String> gamesAndPrices = new Dictionary<int, string>();
 
 		public ScanSummaryPage()
 		{
@@ -32,19 +30,6 @@ public partial class ScanSummaryPage : ContentPage
 			base.OnAppearing();
 
 			_restService = new RestService();
-			HttpResponseMessage responseGames = await _restService.GetAllGames();
-			string contentGames = await responseGames.Content.ReadAsStringAsync();
-			contentGames = Constants.TakeOutHeaderJSON(contentGames);
-			allGames = JsonConvert.DeserializeObject<GameNamePriceData[]>(contentGames);
-			for (int j = 0; j < allGames.Length; j++)
-			{
-				GameNamePriceData curr = allGames[j];
-				if (!gamesAndNames.ContainsKey(curr.Game))
-				{
-					gamesAndNames.Add(curr.Game, curr.Name);
-					gamesAndPrices.Add(curr.Game, curr.Price);
-				}
-			}
 
 			switch (Constants.State)
 			{
@@ -136,7 +121,7 @@ public partial class ScanSummaryPage : ContentPage
                     {
 						if (Constants.startTickets[i].isScanned == false)
 						{
-							var action = await DisplayActionSheet("Be Careful!\nA ticket was not scanned.", "Continue anyways", "Cancel");
+							var action = await DisplayActionSheet("A ticket was not scanned.\n"+Constants.startTickets[i].Id, "Continue anyways", "Cancel");
 							switch (action)
 							{
 								case "Continue anyways":

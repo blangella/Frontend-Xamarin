@@ -14,21 +14,28 @@
                 FontSize="18"
                 HorizontalOptions="Center"
                 Text="Manual Entry" />
+            <Label
+                FontSize="16"
+                HorizontalOptions="Center"
+                Text="Please include all '0's " />
             <StackLayout Orientation="Horizontal">
                 <Entry
                     x:Name="GameEntry"
                     Margin="4,0,4,0"
                     HorizontalOptions="FillAndExpand"
+                    Keyboard="Numeric"
                     Placeholder="Game" />
                 <Entry
                     x:Name="PackEntry"
                     Margin="4,0,4,0"
                     HorizontalOptions="FillAndExpand"
+                    Keyboard="Numeric"
                     Placeholder="Pack" />
                 <Entry
                     x:Name="NbrEntry"
                     Margin="4,0,4,0"
                     HorizontalOptions="FillAndExpand"
+                    Keyboard="Numeric"
                     Placeholder="Number" />
                 <Button
                     Margin="4,0,4,0"

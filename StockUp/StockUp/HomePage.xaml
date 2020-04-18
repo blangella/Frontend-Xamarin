@@ -21,7 +21,7 @@
                     Clicked="Start_Clicked"
                     Style="{StaticResource user-function-button}"
                     Text="Start Your Day" />
-                <Label Style="{StaticResource user-function-info}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus." />
+                <Label Style="{StaticResource user-function-info}" Text="Tap this button to start your day. You will be able to get your list of tickets to scan. Once you have scanned all tickets needed, you can then log them in!" />
             </StackLayout>
         </Frame>
 
@@ -32,7 +32,7 @@
                     Clicked="Activate_Clicked"
                     Style="{StaticResource user-function-button}"
                     Text="Activate New Pack" />
-                <Label Style="{StaticResource user-function-info}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus." />
+                <Label Style="{StaticResource user-function-info}" Text="Tap this button anytime during your shift when you loaded a bin with a new pack and need to scan the first ticket of that pack." />
             </StackLayout>
         </Frame>
 
@@ -43,7 +43,7 @@
                     Clicked="End_Clicked"
                     Style="{StaticResource user-function-button}"
                     Text="End Your Day" />
-                <Label Style="{StaticResource user-function-info}" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In facilisis nulla eu felis fringilla vulputate. Nullam porta eleifend lacinia. Donec at iaculis tellus." />
+                <Label Style="{StaticResource user-function-info}" Text="Tap this button to end your day. You will be able to scan the top ticket of each bin in your store. Once you have scanned all tickets, you can then log them in!" />
             </StackLayout>
         </Frame>
     </StackLayout>
