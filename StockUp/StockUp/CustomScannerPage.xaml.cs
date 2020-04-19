@@ -34,7 +34,14 @@ namespace StockUp
 			Zxing.OnScanResult += (result) =>
 				Device.BeginInvokeOnMainThread(async () => {
 
-					LogTicket(result.Text);
+                    if (result.Text.Length > 14)
+                    {
+			            LogTicket(result.Text);
+                    }
+                    else
+                    {
+				        await DisplayAlert("Failed", "Make sure to include all 0's in your 14 digit barcode.", "OK");
+                    }
 				});
 
 			Overlay = new ZXingDefaultOverlay
@@ -74,8 +81,14 @@ namespace StockUp
 
 			string result = GameEntry.Text + PackEntry.Text + NbrEntry.Text;
 			Debug.Write("\nresult: " + result);
-			LogTicket(result);
-
+            if (result.Length > 14)
+            {
+			    LogTicket(result);
+            }
+            else
+            {
+				DisplayAlert("Failed", "Make sure to include all 0's in your 14 digit barcode.", "OK");
+            }
 		}
 
 		private async void LogTicket(String result)
