@@ -8,7 +8,7 @@ namespace StockUp.Model
 {
 	public static class Constants
 	{
-		public const string StockUpEndpoint = "http://192.168.1.160:3000/api/";
+		public const string StockUpEndpoint = "https://stockup-api.us-south.cf.appdomain.cloud/api/";
 		public static string APIKey = "INSERT_API_KEY_HERE";
 		public static UserData UserData;
 		public static string State;
