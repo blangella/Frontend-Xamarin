@@ -18,13 +18,14 @@ This system is simple, convenient, & affordable compared to any local franchise 
 Manohar Chitoda, Xavier La Rosa, Barry Langella, and Suraj Upadhyay
 
 ## Current Main Features
-- Login
-- Scan Barcode
+- Login / Logout
+- Sign Up
+- View Analytics
+- Scan Barcode tickets
 
 
 ## Features on the Way
-- Admin Controls
-- Employee Controls
+- Edge case handling
 
 
 ## Technologies Used
@@ -35,5 +36,12 @@ Manohar Chitoda, Xavier La Rosa, Barry Langella, and Suraj Upadhyay
 - ZXing Mobile
 
 ## Current Status
-- In development process
-- No deployment date at the moment
+- Version 1 complete via apk file in /apks/version1/__.apk
+
+# How to setup and demo the app on your physical device
+- Requirements: Android device, device must have Android API 21 - 29 (Android version 10+)
+- Next you need to download the APK file, to do so make sure you are using your Android device for the next following step
+- Go to: https://github.com/SiS-Developers/Frontend-Xamarin/tree/master/apks/version1 and download com.companyname.stockup.apk file
+  - Or... clone/download project from GitHub, go to apks/version1/ and download the file "com.companyname.stockup.apk"
+- You will receive a pop up about installation, make sure to install via the "Package Installer" optiion
+- The apk will install on your phone and you should be able to demo the app live with our cloud API running 24/7
