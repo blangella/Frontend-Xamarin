@@ -22,6 +22,7 @@ Manohar Chitoda, Xavier La Rosa, Barry Langella, and Suraj Upadhyay
 - Sign Up
 - View Analytics
 - Scan Barcode tickets
+- Android & iOS cross platform
 
 
 ## Features on the Way
@@ -34,6 +35,7 @@ Manohar Chitoda, Xavier La Rosa, Barry Langella, and Suraj Upadhyay
 - Xamarin
 - Xamarin Forms
 - ZXing Mobile
+- MicroCharts
 
 ## Current Status
 - Version 1 complete via apk file in /apks/version1/__.apk
