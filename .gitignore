@@ -1,7 +1,6 @@
 
 *.json
 *.xml
-*.apk
 *.dll
 *.pdb
 *.deployment
